@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Share+Tech+Mono&display=swap');
+
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f1eb;
+    font-family: 'june-expt-variable', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Vertical Sidebar */
+.sidebar {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 200;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    background-color: #1a1818;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Sidebar link with strikethrough animation */
+.sidebar a {
+    position: relative;
+    color: #f8f1eb;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: inline-block;
+}
+
+.sidebar a::before {
+    content: '';
+    position: absolute;
+    width: 0%; /* Initially, no width */
+    height: 2px;
+    background-color: #ffffff; /* Color of the strikethrough */
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg); /* Center the line and rotate */
+    transition: width 0.3s ease-in-out;
+}
+
+.sidebar a:hover::before {
+    width: 100%; /* On hover, expand the width across the text */
+}
+
+.sidebar a:hover {
+    color: #ffffff7e; /* Optional: change text color on hover */
+}
+
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f8f1eb;
+}
+
+.vertical-text {
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.divider {
+    width: 1px;
+    height: 200px;
+    background-color: #f8f1eb;
+    border: none;
+    margin: 200px 0;
+}
+
+
+/* Main container for the work section */
+.work-container {
+    background-color: #1a1818;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Full width of the screen */
+    height: 100vh;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 1s ease;
+}
+
+/* Left description section */
+.work-description {
+    width: 35%; /* Keep the width comfortable */
+    padding-left: 200px; /* Adds more space on the left */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+    color: #aaa;
+}
+
+.work-description h2 {
+    font-size: 1.5vw;
+    margin-bottom: 20px;
+    color: #f8f1eb;
+}
+
+.work-description p {
+    font-size: 1.2vw;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    max-width: 400px;
+}
+
+/* Right scrollable project section */
+.work-projects {
+    width: 60%;
+    overflow-y: scroll;
+    height: 100vh;
+    padding-right: 20px;
+    padding-top: 300px; /* Adjust as needed to move section lower */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.work-projects::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Individual project entry */
+.project {
+    margin-bottom: 50px;
+}
+
+.project h1 {
+    font-size: 8vw;
+    text-transform: uppercase;
+    font-variation-settings: 'STYL' 100;
+    margin-bottom: 5px;
+    color: #fff;
+    white-space: nowrap;
+    transition: 0.5s;
+}
+
+.project h1:hover {
+    color: #555;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ff9800' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    background-position: 0 90%;
+    background-size: auto 6px;
+    background-repeat: repeat-x;
+}
+
+.project a {
+    text-decoration: none;
+}
+
+.project p {
+    font-size: 1.5vw;
+    color: #777;
+}
+

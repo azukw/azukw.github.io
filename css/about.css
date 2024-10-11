@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Share+Tech+Mono&display=swap');
+
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f1eb;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Vertical Sidebar */
+.sidebar {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 200;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    background-color: #1a1818;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Sidebar link with strikethrough animation */
+.sidebar a {
+    position: relative;
+    color: #f8f1eb;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: inline-block;
+}
+
+.sidebar a::before {
+    content: '';
+    position: absolute;
+    width: 0%; /* Initially, no width */
+    height: 2px;
+    background-color: #ffffff; /* Color of the strikethrough */
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg); /* Center the line and rotate */
+    transition: width 0.3s ease-in-out;
+}
+
+.sidebar a:hover::before {
+    width: 100%; /* On hover, expand the width across the text */
+}
+
+.sidebar a:hover {
+    color: #ffffff7e; /* Optional: change text color on hover */
+}
+
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f8f1eb;
+}
+
+.vertical-text {
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.divider {
+    width: 1px;
+    height: 200px;
+    background-color: #f8f1eb;
+    border: none;
+    margin: 200px 0;
+}
+
+/* Main Container for 'About' Page */
+.about-container {
+    text-align: center;
+    width: 80%;
+    max-width: 1200px;
+}
+
+/* Large About Title */
+.main-title {
+    font-family: 'june-expt-variable', sans-serif;
+    font-variation-settings: 'STYL' 100;
+    font-size: 10vw; /* Responsive font size */
+    font-weight: 700;
+    color: #1a1818;
+    margin-bottom: 50px;
+    line-height: 1;
+}
+
+/* Bottom Section */
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+/* Column Styling */
+.column {
+    width: 45%; /* Takes up roughly half of the container width */
+}
+
+/* Column Titles */
+.column h2 {
+    font-family: 'june-expt-variable', sans-serif;
+    font-variation-settings: 'STYL' 50;
+    font-size: 2vw;
+    color: #1a1818;
+    margin-bottom: 20px;
+}
+
+/* Paragraph Styling */
+.column p {
+    font-size: 1.2vw;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 15vw;
+    }
+
+    .bottom-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .column h2 {
+        font-size: 4vw;
+    }
+
+    .column p {
+        font-size: 3vw;
+    }
+}
+
+.right {
+    padding-top: 30px;
+}
+
+/* Bottom Section */
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+/* Adjust button container style */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px; 
+}
+
+/* Button Styles */
+.button {
+    font-family: 'june-expt-variable', sans-serif;
+    font-variation-settings: 'STYL' 50;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #f8f1eb;
+    background-color: #1a1818;
+    border-radius: 50px; /* Rounded corners */
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid transparent; /* Smooth hover effect */
+    letter-spacing: 0.1em; /* Slight letter spacing */
+    width: 200px;
+    height: 50px;
+}
+
+/* Hover Effect */
+.button:hover {
+    font-size: 1.5rem;
+    padding: 15px 35px;
+    background-color: #333; /* Slightly darker background on hover */
+    border-color: #f8f1eb; /* White border on hover */
+}

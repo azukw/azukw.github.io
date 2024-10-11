@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Share+Tech+Mono&display=swap');
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f8f1eb;
+    overflow-x: hidden;
+}
+
+/* Vertical Sidebar */
+.sidebar {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 200;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Sidebar link with strikethrough animation */
+.sidebar a {
+    position: relative;
+    color: #1a1818;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: inline-block;
+}
+
+.sidebar a::before {
+    content: '';
+    position: absolute;
+    width: 0%; /* Initially, no width */
+    height: 2px;
+    background-color: #1a1818; /* Color of the strikethrough */
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg); /* Center the line and rotate */
+    transition: width 0.3s ease-in-out;
+}
+
+.sidebar a:hover::before {
+    width: 100%; /* On hover, expand the width across the text */
+}
+
+.sidebar a:hover {
+    color: #0303037e; /* Optional: change text color on hover */
+}
+
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #1a1818;
+}
+
+.vertical-text {
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.divider {
+    width: 1px;
+    height: 200px;
+    background-color: #1a1818;
+    border: none;
+    margin: 200px 0;
+}
+
+/* Initial section with brown rectangle and title */
+.initial-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.brown-rectangle {
+    position: absolute;
+    top: 0;
+    width: 90%;
+    height: 90vh;
+    background-color: #1a1818;
+    transform: translateY(-100%); /* Start hidden above */
+    animation: slideDown 1s forwards;
+}
+
+.title {
+    text-align: center;
+    font-family: "june-expt-variable", sans-serif;
+    font-variation-settings: 'STYL' 100;
+    padding-top: 300px;
+    position: relative;
+    font-size: 10vw;
+    color: #f8f1eb;
+    opacity: 0;
+    transform: translateY(1500px);
+    animation: slideUp 1s 1s forwards; /* Delayed to start after rectangle */
+}
+
+/* Content section */
+.content-section {
+    
+    padding: 100px 10%;
+    text-align: left;
+    background-color: #f8f1eb;
+    
+}
+
+.description {
+    text-align: center;
+    font-family: "june-expt-variable", sans-serif;
+    font-variation-settings: 'STYL' 50;
+    font-size: 2vw;
+    margin-bottom: 150px;
+}
+
+/* Roles section container */
+.roles {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Space between each role item */
+    margin-top: 40px;
+    max-width: 80%; /* Limits width to align with content */
+    margin-left: auto;
+    margin-right: auto; /* Centers the entire roles section within the page */
+    padding: 0 10px;
+}
+
+/* Each role item */
+.role-item {
+    text-align: center; /* Centers content within each role-item */
+    max-width: 250px;
+}
+
+/* Role titles */
+.role-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Role descriptions */
+.role-item p {
+    padding-top: 10px;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Link styling for URL */
+.role-item a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.role-item a:hover {
+    color: #333;
+}
+
+
+/* Image gallery */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes maximum */
+    grid-gap: 20px; /* Espace entre les images */
+    justify-items: center; /* Centrer les images */
+    padding: 50px 10%;
+}
+
+/* Images 300x300 */
+.image-gallery img {
+    width: 100%; /* Les images rempliront leur cellule */
+    object-fit: cover;
+    border-radius: 5px;
+    aspect-ratio: 1 / 1; /* Ratio 300x300 */
+}
+
+/* Images 600x300 (qui prennent deux colonnes) */
+.image-gallery img.wide {
+    grid-column: span 2; /* Ces images prendront deux colonnes */
+    aspect-ratio: 2 / 1; /* Ratio 600x300 */
+}
+
+/* Responsiveness - Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .image-gallery {
+        grid-template-columns: 1fr 1fr; /* 2 colonnes pour les écrans plus petits */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-gallery {
+        grid-template-columns: 1fr; /* 1 colonne pour les très petits écrans */
+    }
+
+    .image-gallery img.wide {
+        grid-column: span 1; /* Les images larges occuperont une colonne entière sur petits écrans */
+    }
+}
+
+
+/* Animations */
+@keyframes slideDown {
+    to {
+        transform: translateY(0); /* Move rectangle to visible position */
+    }
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
