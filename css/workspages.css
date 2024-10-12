@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Share+Tech+Mono&familyfamily=Dancing+Script:wght@400..700&display=swap');
 
 
 /* Reset */
@@ -27,7 +27,7 @@ body {
 
 /* Vertical Sidebar */
 .sidebar {
-    font-family: "Share Tech Mono", monospace;
+    font-family: "Poppins", monospace;
     font-size: 200;
     position: fixed;
     left: 0;
@@ -126,29 +126,29 @@ body {
 /* Content section */
 .content-section {
     
-    padding: 100px 10%;
+    padding: 15px 10%;
     text-align: left;
     background-color: #ece7e1;
     
 }
 
 .description {
-    text-align: center;
-    font-family: "june-expt-variable", sans-serif;
-    font-variation-settings: 'STYL' 50;
-    font-size: 2vw;
-    margin-bottom: 150px;
+    padding-left: 35vh;
+    line-height: 7vh;
+    font-family: campaign-serif, sans-serif;
+    font-size: 3vw;
+    margin-bottom: 50px;
 }
 
 /* Roles section container */
 .roles {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Poppins", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px; /* Space between each role item */
-    margin-top: 40px;
     max-width: 80%; /* Limits width to align with content */
+    margin-bottom: 100px;
     margin-left: auto;
     margin-right: auto; /* Centers the entire roles section within the page */
     padding: 0 10px;
@@ -156,14 +156,15 @@ body {
 
 /* Each role item */
 .role-item {
-    text-align: center; /* Centers content within each role-item */
     max-width: 250px;
 }
 
 /* Role titles */
 .role-title {
-    font-weight: bold;
-    font-size: 1.1rem;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    font-weight: 600;
+    font-size: 1rem;
     letter-spacing: 0.05em;
     color: #333;
     margin-bottom: 10px;
@@ -230,9 +231,8 @@ body {
     }
 }
 
-/* Images 80% width, no height limit */
 .image-gallery img.large {
-    width: 80%; /* 80% de la largeur de la page */
+    width: 100%; 
     height: auto; /* La hauteur s'ajuste automatiquement */
     object-fit: cover; /* L'image est ajustée pour remplir son conteneur */
     border-radius: 5px;
@@ -258,10 +258,18 @@ body {
 }
 
 video {
-    margin-top: -75px;
+    margin-top: 30px;
     margin-bottom: 75px;
     padding-left: 10%;
     width: 90%;
     height: 100%;
     object-fit: cover;
+}
+
+.image-description {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    margin-bottom: 50px;
 }
