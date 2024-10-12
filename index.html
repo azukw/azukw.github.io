@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Sami SAOUD</title>
+    <link rel="icon" type="image/png" href="imgs/favicon.png" />
     <link rel="stylesheet" href="https://use.typekit.net/zda3gdw.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-
-    
-    
     <div class="container" id="main-content">
         <!-- Vertical Sidebar -->
         <div class="sidebar">
@@ -20,10 +18,28 @@
                 <p class="vertical-text">© 2024</p>
             </div>
         </div>
+
+        <section class="controls">
+            <div class="key-row">
+                <div class="key">↑</div>
+            </div>
+            <div class="key-row">
+                <div class="key">←</div>
+                <div class="key">↓</div>
+                <div class="key">→</div>
+            </div>
+            <div class="key-row">
+                <div class="key space">Espace</div>
+            </div>
+        </section>
+        
+        
+
+        
         <nav class="navigation">
-            <a href="work.html">PROJETS</a>
-            <a href="about.html">MOI</a>
-            <a href="#contact">CONTACT</a>
+            <a href="work.html">PROJETS</a> <!-- Utilisé comme plateforme -->
+            <a href="about.html" id="littlenav">MOI</a> <!-- Utilisé comme plateforme -->
+            <a href="contact.html">CONTACT</a> <!-- Utilisé comme plateforme -->
         </nav>
         <section class="info">
             <p class="name">SAMI SAOUD</p>
@@ -31,7 +47,29 @@
                 <a href="https://www.univ-rennes.fr" target="_blank">l'Université de Rennes</a>
             </p>
         </section>
+    
+
+        <!-- Personnage ajouté ici -->
+        <div class="character" id="character"></div>
+
+        <div class="platform" id="top-platform"></div>
+        <div class="platform" id="bottom-platform"></div>
+        <div class="platform" id="left-platform"></div>
+        <div class="platform" id="right-platform"></div
+            >
+        <div class="platform" id="first-platform"></div>
+        <div class="platform" id="second-platform"></div>
+        <div class="platform" id="third-platform"></div>
+        <div class="platform" id="fourth-platform"></div>
+
+        <div class="platform" id="projets-platform"></div>
+        <div class="platform" id="moi-platform"></div>
+        <div class="platform" id="contact-platform"></div>
+        <div class="platform" id="info-platform"></div>
+        
+
     </div>
+
     <script src="js/index.js"></script>
 </body>
 </html>

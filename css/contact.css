@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Share+Tech+Mono&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+::-moz-selection { 
+    color: #1a1818;
+    background: #f8f1eb;
+  }
+  
+  ::selection {
+    color: #1a1818;
+    background: #f8f1eb;
+  }
+
+  
+body {
+    background-color: #f8f1eb;
+    font-family: "june-expt-variable", sans-serif;
+    font-variation-settings: "STYL" 50;
+    color: #f8f1eb;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #121212;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    transform: translateY(200%);
+    transition: all 1s ease;
+}
+
+.content {
+    max-width: 800px;
+}
+
+h1.hello {
+    font-size: 12vw; /* Large responsive font size */
+    font-weight: normal;
+    letter-spacing: -0.05em;
+}
+
+h1.hello span {
+    color: #f5f5f5; /* Slightly different color for dot */
+}
+
+.subtext {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2vw;
+    margin: 20px 0;
+    font-weight: 300;
+    color: #d4d4d4;
+}
+
+.contact p {
+    font-family: "Montserrat", sans-serif;
+    margin: 10px 0;
+    font-size: 1vw;
+    color: #d4d4d4;
+}
+
+.contact a {
+    font-family: "Montserrat", sans-serif;
+    color: #f5f5f5;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+
+/* Vertical Sidebar */
+.sidebar {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 200;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    background-color: #1a1818;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Sidebar link with strikethrough animation */
+.sidebar a {
+    position: relative;
+    color: #f8f1eb;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: inline-block;
+}
+
+.sidebar a::before {
+    content: '';
+    position: absolute;
+    width: 0%; /* Initially, no width */
+    height: 2px;
+    background-color: #ffffff; /* Color of the strikethrough */
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg); /* Center the line and rotate */
+    transition: width 0.3s ease-in-out;
+}
+
+.sidebar a:hover::before {
+    width: 100%; /* On hover, expand the width across the text */
+}
+
+.sidebar a:hover {
+    color: #ffffff7e; /* Optional: change text color on hover */
+}
+
+
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f8f1eb;
+}
+
+.vertical-text {
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.divider {
+    width: 1px;
+    height: 200px;
+    background-color: #f8f1eb;
+    border: none;
+    margin: 200px 0;
+}

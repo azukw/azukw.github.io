@@ -6,6 +6,16 @@
     box-sizing: border-box;
 }
 
+::-moz-selection { 
+    color: #f8f1eb;
+    background: #1a1818;
+  }
+  
+  ::selection {
+    color: #f8f1eb;
+    background: #1a1818;
+  }
+  
 body {
     font-family: "Share Tech Mono", monospace;
     background-color: #1a1818;
@@ -53,6 +63,7 @@ body {
 }
 
 .container {
+    padding-left: 100px;
     background-color: #f8f1eb;
     display: flex;
     justify-content: space-between;
@@ -87,13 +98,16 @@ body {
     color: #555;
 }
 
+
+
+
 .info {
     padding-right: 100px;
     text-align: left;
 }
 
 .name {
-    font-family: "jun-expt-variable", sans-serif;
+    font-family: "june-expt-variable", sans-serif;
     font-weight: 600;
     font-size: 1.5vw;
     margin-bottom: 10px;
@@ -114,3 +128,144 @@ body {
 .details a:hover {
     color: #555;
 }
+
+/* Le terrain (éléments de la page) */
+.platform {
+    pointer-events: none;
+    position: absolute;
+    overflow: hidden;
+    background-color: #1a1818;
+    
+}
+
+/* Plateformes aux bords de l'écran */
+#top-platform {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 20px;
+
+}
+
+#bottom-platform {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 20px;
+
+}
+
+#left-platform {
+    position: fixed;
+    top: 0;
+    left: 8.4vh;
+    width: 20px;
+    height: 100vh;
+
+}
+
+#right-platform {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100vh;
+
+}
+#info-platform {
+    opacity: 0;
+    top: 44vh;
+    left: 144vh;
+    width: 27vh;
+    height: 100px;
+    background-color: #ff7700;
+}
+
+#projets-platform {
+    opacity: 0;
+    top: 11vh;
+    left: 45vh;
+    width: 87vh;
+    height: 190px;
+    background-color: #ff8316;
+}
+
+#moi-platform {
+    opacity: 0;
+    top: 39vh;
+    left: 70vh;
+    width: 38vh;
+    height: 200px;
+    background-color: #ee6f00;
+}
+
+#contact-platform {
+    opacity: 0;
+    top: 67vh;
+    left: 42vh;
+    width: 93vh;
+    height: 190px;
+    background-color: #ff7700;
+}
+
+
+
+/* Personnage */
+.character {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #1a1818;
+}
+
+/* Section des touches de contrôle */
+.controls {
+    padding-left: 5;
+    position: absolute;
+    top: 9%; /* Aligne verticalement au centre */
+    right: 2%; /* Place à gauche de la page */
+    transform: translateY(-50%); /* Centre verticalement */
+    text-align: center;
+    color: #f8f1eb;
+    font-family: "Share Tech Mono", monospace;
+}
+
+/* Style pour chaque touche */
+.key {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    background-color: #1a1818;
+    color: #f8f1eb;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Style spécifique pour la touche Espace */
+.key.space {
+    width: 70px; /* Largeur plus grande pour ressembler à une barre d'espace */
+}
+
+/* Alignement en croix pour ZQSD */
+.key-row {
+    display: flex;
+    justify-content: center;
+}
+
+
+.controls p {
+    font-family: "june-expt-variable", sans-serif;
+    font-variation-settings: 'STYL' 0;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #1a1818;
+    font-weight: 500;
+}
+

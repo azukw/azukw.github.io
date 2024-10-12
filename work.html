@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work Section</title>
+    <title>Sami SAOUD</title>
+    <link rel="icon" type="image/png" href="imgs/favicon.png" />
     <link rel="stylesheet" href="https://use.typekit.net/zda3gdw.css">
     <link rel="stylesheet" href="css/work.css">
 </head>
@@ -16,38 +17,43 @@
                 <p class="vertical-text">© 2024</p>
             </div>
         </div>
+
         <!-- Left Side - Description -->
         <div class="work-description">
-            <h2>PROJETS</h2>
-            <p>Ces projets ont été pour la plupart réalisés pendant ma Licence Informatique à Rennes.</p>
-            <p>Pendant ces trois années, j'ai pu acquérir de l'expérience en programmation, ce qui me permet de toujours améliorer mes projets.</p>
+            <h2 id="title">PROJETS</h2>
+            <p id="description">Ces projets ont été pour la plupart réalisés pendant ma Licence Informatique à Rennes. Pendant ces trois années, j'ai pu acquérir de l'expérience en programmation, ce qui me permet de toujours améliorer mes projets.</p>
+            
+            <!-- Conteneur pour les images qui apparaîtront en hover -->
+            <div id="hover-image" class="hover-image">
+                <img id="project-image">
+            </div>
         </div>
 
         <!-- Right Side - Projects -->
         <div class="work-projects">
-            <div class="project">
+            <div class="project" data-image="imgs\2.jpg">
                 <a href="projets/creative-seeds.html"><h1>CREATIVE SEEDS</h1></a>
                 <p>– Production en Temps Réel</p>
             </div>
-            <div class="project">
+            <div class="project" data-image="imgs\3.jpg">
                 <a href="projets/gen-projet.html"><h1>PROJET GEN</h1></a>
                 <p>– Université de Rennes </p>
             </div>
-            <div class="project">
+            <div class="project" data-image="imgs\2.jpg">
                 <a href="projets/portfolio-website.html"><h1>SITE PORTFOLIO</h1></a>
                 <p>– Web Design </p>
             </div>
-            <div class="project">
+            <div class="project" data-image="imgs\3.jpg">
                 <a href="projets/nuit-info.html"><h1>NUIT DE L'INFO</h1></a>
                 <p>– Serious Game Dev</p>
             </div>
-            <div class="project">
+            <div class="project" data-image="imgs\2.jpg">
                 <a href="projets/site-asso.html"><h1>SITE ASSO</h1></a>
                 <p>– Web Design</p>
             </div>
         </div>
     </div>
 
-    <script src="js/work.js"></script>  <!-- Adding the animation JS file -->
+    <script src="js/work.js"></script>
 </body>
 </html>

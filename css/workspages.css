@@ -8,6 +8,16 @@
     box-sizing: border-box;
 }
 
+::-moz-selection { 
+    color: #f8f1eb;
+    background: #1a1818;
+  }
+  
+  ::selection {
+    color: #f8f1eb;
+    background: #1a1818;
+  }
+
 body {
     font-family: Arial, sans-serif;
     color: #333;

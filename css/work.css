@@ -8,6 +8,17 @@
     box-sizing: border-box;
 }
 
+::-moz-selection { 
+    color: #1a1818;
+    background: #f8f1eb;
+  }
+  
+  ::selection {
+    color: #1a1818;
+    background: #f8f1eb;
+  }
+
+
 body {
     background-color: #f8f1eb;
     font-family: 'june-expt-variable', sans-serif;
@@ -170,3 +181,44 @@ body {
     color: #777;
 }
 
+
+/* Container for the hover image */
+.hover-image {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease; /* Transition douce pour l'apparition/disparition */
+}
+
+.hover-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Permet de garder l'image centrée et carrée */
+    display: block;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition de l'opacité et de la transformation */
+}
+
+/* When hovering over a project */
+.project:hover ~ .work-description .hover-image {
+    height: 300px; /* Taille carrée du conteneur */
+}
+
+.project:hover ~ .work-description .hover-image img {
+    opacity: 1; /* L'image devient visible */
+    transform: scale(1); /* Revenir à l'échelle normale */
+}
+
+/* Retour de l'image à l'état normal lors du hover-out */
+.work-description .hover-image img {
+    transform: scale(0.9); /* L'image se rétracte légèrement */
+    opacity: 0; /* Rendre l'image invisible */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition fluide */
+}
+
+/* Lift the paragraph and title */
+.project:hover ~ .work-description #description,
+.project:hover ~ .work-description #title {
+    transform: translateY(-80px); /* Lever le paragraphe et le titre */
+    transition: transform 0.5s ease; /* Transition douce pour le mouvement */
+}
