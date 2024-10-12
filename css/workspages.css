@@ -9,19 +9,19 @@
 }
 
 ::-moz-selection { 
-    color: #f8f1eb;
+    color: #ece7e1;
     background: #1a1818;
   }
   
   ::selection {
-    color: #f8f1eb;
+    color: #ece7e1;
     background: #1a1818;
   }
 
 body {
     font-family: Arial, sans-serif;
     color: #333;
-    background-color: #f8f1eb;
+    background-color: #ece7e1;
     overflow-x: hidden;
 }
 
@@ -117,7 +117,7 @@ body {
     padding-top: 300px;
     position: relative;
     font-size: 10vw;
-    color: #f8f1eb;
+    color: #ece7e1;
     opacity: 0;
     transform: translateY(1500px);
     animation: slideUp 1s 1s forwards; /* Delayed to start after rectangle */
@@ -128,7 +128,7 @@ body {
     
     padding: 100px 10%;
     text-align: left;
-    background-color: #f8f1eb;
+    background-color: #ece7e1;
     
 }
 
@@ -228,6 +228,18 @@ body {
     .image-gallery img.wide {
         grid-column: span 1; /* Les images larges occuperont une colonne entière sur petits écrans */
     }
+}
+
+/* Images 80% width, no height limit */
+.image-gallery img.large {
+    width: 80%; /* 80% de la largeur de la page */
+    height: auto; /* La hauteur s'ajuste automatiquement */
+    object-fit: cover; /* L'image est ajustée pour remplir son conteneur */
+    border-radius: 5px;
+    aspect-ratio: auto; /* Pas de ratio spécifique, taille libre */
+    grid-column: span 3; /* Prend trois colonnes pour les aligner différemment */
+    margin-bottom: 50px;
+
 }
 
 

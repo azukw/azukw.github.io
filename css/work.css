@@ -199,10 +199,7 @@ body {
     transition: opacity 0.5s ease, transform 0.5s ease; /* Transition de l'opacité et de la transformation */
 }
 
-/* When hovering over a project */
-.project:hover ~ .work-description .hover-image {
-    height: 300px; /* Taille carrée du conteneur */
-}
+
 
 .project:hover ~ .work-description .hover-image img {
     opacity: 1; /* L'image devient visible */
