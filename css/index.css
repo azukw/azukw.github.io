@@ -251,13 +251,21 @@ body {
     margin: 0.2vh;
     background-color: #1a1818;
     color: #f8f1eb;
-    font-size: 1.5vh;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 0.3vw;
     font-weight: bold;
 }
+
+.f11 { 
+    font-size: 1.1vh;
+    position: absolute;
+    padding-top: 93vh;
+    padding-left: 81vw;
+    
+}
+
 
 /* Style spécifique pour la touche Espace */
 .key.space {
@@ -287,8 +295,11 @@ body {
 
 
 
+
+
 @media (max-height: 900px) or (max-width: 1800px) {
     .platform,
+    .f11,
     .character,
     .controls {
         display: none; 
@@ -301,13 +312,14 @@ body {
     #littlenav {
         margin-left: 5vw;
     }
-    
+
     .divider {
         margin: 10vh;
     }
 
     .platform,
     .character,
+    .f11,
     .controls {
         display: none; 
     }
