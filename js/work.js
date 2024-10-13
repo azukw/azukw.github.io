@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Réinitialiser après un délai pour éviter les changements brusques
             hoverTimeout = setTimeout(() => {
                 hoverImage.style.opacity = '0'; // Cacher l'image en douceur
-                hoverImage.src = ''; // Réinitialiser la source de l'image
+                hoverImage.src = 'imgs/cube.png'; // Réinitialiser la source de l'image
                 hoverImageContainer.style.height = '0'; // Remettre la hauteur du conteneur à 0
                 description.style.transform = 'translateY(0)'; // Réinitialiser la position du paragraphe
                 title.style.transform = 'translateY(0)'; // Réinitialiser la position du titre

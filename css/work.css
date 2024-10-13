@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Share+Tech+Mono&display=swap');
 
-
 /* General reset */
 * {
     margin: 0;
@@ -11,13 +10,12 @@
 ::-moz-selection { 
     color: #1a1818;
     background: #f8f1eb;
-  }
+}
   
-  ::selection {
+::selection {
     color: #1a1818;
     background: #f8f1eb;
-  }
-
+}
 
 body {
     background-color: #f8f1eb;
@@ -58,21 +56,20 @@ body {
     position: absolute;
     width: 0%; /* Initially, no width */
     height: 2px;
-    background-color: #ffffff; /* Color of the strikethrough */
+    background-color: #ffffff;
     top: 65%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(90deg); /* Center the line and rotate */
+    transform: translate(-50%, -50%) rotate(90deg);
     transition: width 0.3s ease-in-out;
 }
 
 .sidebar a:hover::before {
-    width: 100%; /* On hover, expand the width across the text */
+    width: 100%;
 }
 
 .sidebar a:hover {
-    color: #ffffff7e; /* Optional: change text color on hover */
+    color: #ffffff7e;
 }
-
 
 .sidebar-content {
     display: flex;
@@ -95,14 +92,13 @@ body {
     margin: 200px 0;
 }
 
-
 /* Main container for the work section */
 .work-container {
     background-color: #1a1818;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%; /* Full width of the screen */
+    width: 100%;
     height: 100vh;
     opacity: 0;
     transform: translateY(100%);
@@ -111,8 +107,8 @@ body {
 
 /* Left description section */
 .work-description {
-    width: 35%; /* Keep the width comfortable */
-    padding-left: 200px; /* Adds more space on the left */
+    width: 35%;
+    padding-left: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,11 +136,12 @@ body {
     overflow-y: scroll;
     height: 100vh;
     padding-right: 20px;
-    padding-top: 300px; /* Adjust as needed to move section lower */
+    padding-top: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .work-projects::-webkit-scrollbar {
     width: 10px;
 }
@@ -181,41 +178,43 @@ body {
     color: #777;
 }
 
-
 /* Container for the hover image */
 .hover-image {
+    right: 1.3vw;
     position: relative;
     height: 0;
     overflow: hidden;
-    transition: height 0.5s ease; /* Transition douce pour l'apparition/disparition */
+    transition: height 0.5s ease;
 }
 
+/* Gestion de l'image dans .hover-image pour éviter le zoom */
 .hover-image img {
+    
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Permet de garder l'image centrée et carrée */
+    object-fit: contain; /* Contenir l'image sans la couper ni l'étirer */
     display: block;
     opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition de l'opacité et de la transformation */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    max-width: 600px; /* Limiter la taille maximale de l'image */
+    max-height: 600px;
 }
-
 
 
 .project:hover ~ .work-description .hover-image img {
-    opacity: 1; /* L'image devient visible */
-    transform: scale(1); /* Revenir à l'échelle normale */
+    opacity: 1;
+    transform: scale(1);
 }
 
-/* Retour de l'image à l'état normal lors du hover-out */
 .work-description .hover-image img {
-    transform: scale(0.9); /* L'image se rétracte légèrement */
-    opacity: 0; /* Rendre l'image invisible */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition fluide */
+    transform: scale(0.9);
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* Lift the paragraph and title */
 .project:hover ~ .work-description #description,
 .project:hover ~ .work-description #title {
-    transform: translateY(-80px); /* Lever le paragraphe et le titre */
-    transition: transform 0.5s ease; /* Transition douce pour le mouvement */
+    transform: translateY(-80px);
+    transition: transform 0.5s ease;
 }
+
