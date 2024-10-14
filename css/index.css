@@ -128,13 +128,28 @@ body {
 
 
 /* Le terrain (éléments de la page) */
+/* Le terrain (éléments de la page) */
 .platform {
-    pointer-events: none;
+    pointer-events: none; /* Laisse ça si tu veux désactiver l'interaction des plateformes */
     position: absolute;
     overflow: hidden;
     background-color: #1a1818;
-    
+    z-index: 1; /* S'assure que les plateformes sont derrière les éléments interactifs */
 }
+
+/* Ajoute z-index aux éléments interactifs */
+.navigation, .info {
+    z-index: 2; /* Assure que les éléments interactifs sont devant */
+}
+
+.character {
+    z-index: 3; /* Place le personnage au-dessus des plateformes et des autres éléments si besoin */
+}
+
+.sidebar {
+    z-index: 2; /* Assure que la sidebar est cliquable */
+}
+
 
 #littlenav {
     margin-left: 13vw;
