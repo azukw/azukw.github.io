@@ -133,7 +133,7 @@ body {
 }
 
 .description {
-    padding-left: 35vh;
+    text-align: center;
     line-height: 7vh;
     font-family: campaign-serif, sans-serif;
     font-size: 3vw;
@@ -273,3 +273,4 @@ video {
     font-size: 17px;
     margin-bottom: 50px;
 }
+
