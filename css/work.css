@@ -245,3 +245,7 @@ rouge bleu larrnon vert rose
     transition: transform 0.5s ease;
 }
 
+.work-description h2,
+.work-description p {
+    transition: all 0.9s ease;
+}

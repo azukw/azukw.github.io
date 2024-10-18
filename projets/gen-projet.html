@@ -9,9 +9,17 @@
     <link rel="stylesheet" href="https://use.typekit.net/cvn8slu.css">
 
     <link rel="stylesheet" href="../css/workspages.css">
+    <style>
+        .title {color: #ffffff;}
+    .content-section{background-color: #ffffff;}
+        .image-gallery{background-color: #ffffff;}
+        .image-description{background-color: #ffffff;}
+        .video-container{background-color: #ffffff;}
+        .initial-section{background-color: #ffffff;}
+        .footer{background-color: #ffffff;}
+    </style>
 </head>
 <body>
-    <!-- Initial animated brown rectangle with title -->
     <div class="initial-section">
         <div class="brown-rectangle"></div>
         <h1 class="title">PROJET GENIE </br> LOGICIEL</h1>
@@ -23,9 +31,8 @@
             <p class="vertical-text">© 2024</p>
         </div>
     </div>
-    <!-- Description and roles section -->
     <div class="content-section">
-        <p class="description">Projet d'application en cours de Génie Logiciel en L2.</p>
+        <p class="description">Projet d'application Swing en cours de Génie Logiciel en L2.</p>
         <div class="roles">
             <div class="role-item">
                 <span class="role-title">ROLE</span>
@@ -33,26 +40,43 @@
             </div>
             <div class="role-item">
                 <span class="role-title">RESPONSABILITES</span>
-                <p>Product Owner, Design, Rectangles</p>
+                <p>Programmation, Design, Rectangles</p>
             </div>
-            <!-- 
             <div class="role-item">
                 <span class="role-title">URL</span>
-                <p><a href="" >Github</a></p>
+                <p><a href="" >Java, JSON, SVG</a></p>
             </div>
-            --> 
         </div>
     </div>
 
-    <!-- Bottom image gallery -->
     <div class="image-gallery">
-        <img src="../imgs/1.jpg" alt="Image 1" class="wide">
-        <img src="../imgs/2.jpg" alt="Image 2" class="normal"> <!-- Image large (600x300) -->
-        <img src="../imgs/3.jpg" alt="Image 3" class="normal">
-        <img src="../imgs/1.jpg" alt="Image 4" class="wide">
-        
+        <img src="../imgs/genProjet/gen3.png"  class="wide">
+        <img src="../imgs/genProjet/gen5.png"  class="normal"> 
     </div>
+        <p class="image-description">Le projet était de créer une application, qui, avec une <strong>API</strong> ainsi qu'une <strong>base de données</strong>. <br> Cette application cherche et compare les prix, atout, et + des stations essence en France.</p>
+    <div class="image-gallery">
+        <img src="../imgs/genProjet/gen1.png"  class="large">
+    </div>
+    <p class="image-description">Faire cette application était un réel <strong>défi</strong>, car les interfaces Swing sont plutôt compliquées à designer. <br> Nous sommes tout de même arrivés à une interface compréhensible, et facile d'utilisation.</p>
+
+    <div class="image-gallery">
+        <img src="../imgs/genProjet/gen4.png"  class="wide">
+        <img src="../imgs/genProjet/gen2.png"  class="normal">
+    </div>
+    <div class="video-container">
+        <p class="image-description">Demander le résultat sur l'application <strong>redirige</strong> vers un site web, qui contient des comparaisons, des graphiques, en fonction des <strong>filtres</strong> choisis. <br> Pour que tout cela fonctionne, il fallait d'abord créer chacune des formes que nous allions utiliser dans l'application.</p>
+
+        <video autoplay loop muted playsinline style>
+            <source src="../imgs/genProjet/gen.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas les vidéos HTML5.
+        </video>
+    </div>
+
+    <p class="image-description">Cette application contient une carte pratique, car elle permet de choisis des régions et département avec un seul clic. <br> Un <strong>clic gauche</strong> à un endroit choisi ajoute le département situé au clic, et un <strong>clic droit</strong> ajoute la région située au clic. <br> Il est également possible de choisir les filtres (ce qu'on va comparer), les carburants à comparer et les options (des stations essence) avec les listes déroulantes sur le côté gauche.</p>
     
+    <footer class="footer">
+        <p>Site créé par Sami :)</p>
+    </footer>
 
     <script src="js/workspages.js"></script>
 </body>

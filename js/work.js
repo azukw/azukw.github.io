@@ -50,3 +50,35 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+// Sélectionner tous les éléments de projet
+const projects = document.querySelectorAll('.project');
+
+// Sélectionner les éléments de la description
+const titleElement = document.getElementById('title');
+const descriptionElement = document.getElementById('description');
+const projectImage = document.getElementById('project-image');
+
+// Parcourir chaque projet
+projects.forEach(project => {
+    // Ajouter un écouteur d'événements pour le survol (hover)
+    project.addEventListener('mouseenter', () => {
+        // Récupérer les données de l'attribut 'data-*' de chaque projet
+        const newTitle = project.getAttribute('data-title');
+        const newDescription = project.getAttribute('data-description');
+        const newImage = project.getAttribute('data-image');
+        
+        // Mettre à jour le contenu de la section description
+        titleElement.textContent = newTitle;
+        descriptionElement.textContent = newDescription;
+        projectImage.src = newImage;
+        projectImage.style.opacity = '1';  // Rendre l'image visible
+    });
+
+    // Optionnel: Revenir au contenu par défaut lorsqu'on quitte le survol
+    project.addEventListener('mouseleave', () => {
+        titleElement.textContent = 'PROJETS';
+        descriptionElement.textContent = 'Ces projets ont été pour la plupart réalisés pendant ma Licence Informatique à Rennes. Pendant ces trois années, j\'ai pu acquérir de l\'expérience en programmation, ce qui me permet de toujours améliorer mes projets.';
+        projectImage.style.opacity = '0';  // Cacher l'image
+    });
+});

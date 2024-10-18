@@ -9,7 +9,19 @@
     <link rel="stylesheet" href="https://use.typekit.net/cvn8slu.css">
     <link rel="stylesheet" href="../css/workspages.css">
 
-
+    <style>
+        * {color: white; }
+        .title{color: #1a1818;}
+        .roles span{color: #ffffff;}
+        .roles p{color: #ffffff;}
+        .content-section{background-color: #1a1818;}
+        .image-gallery{background-color: #1a1818;}
+        .image-description{background-color: #1a1818;}
+        .video-container{background-color: #1a1818;}
+        .brown-rectangle{background-color: #d5c4fc;}
+        .initial-section{background-color: #1a1818;}
+        .footer{background-color: #1a1818;}
+    </style>
 </head>
 <body>
     <!-- Initial animated brown rectangle with title -->
@@ -36,30 +48,39 @@
                 <span class="role-title">RESPONSABILITES</span>
                 <p>Design, Programming</p>
             </div>
-            <!-- 
+
             <div class="role-item">
                 <span class="role-title">URL</span>
-                <p><a href="" >Github</a></p>
+                <p>HTML, CSS, JS</p>
             </div>
-            --> 
-        </div>
     </div>
+</div>
 
     <!-- Bottom image gallery -->
     <div class="image-gallery">
-        <img src="../imgs/sitePortfolioCapture.png" alt="Image 1" class="large">
+        <img src="../imgs/portfolioImages/sitePortfolioCapture.png" alt="Image 1" class="large">
     </div>
+
+    <div class="video-container">
+        <video autoplay loop muted playsinline style>
+            <source src="../imgs/portfolioImages/portfolio1.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas les vidéos HTML5.
+        </video>
+    </div>
+
     <p class="image-description">Ce site m'a permis de découvrir les <strong>cartes</strong> ainsi que les <strong>sliders</strong>. <br> Une difficulté que j'ai réussi à relever, même avec mon peu de connaissances sur le sujet à ce moment donné !</p>
     
     <div class="video-container">
         <video autoplay loop muted playsinline style>
-            <source src="../imgs/portfolio2.mp4" type="video/mp4">
+            <source src="../imgs/portfolioImages/portfolio2.mp4" type="video/mp4">
             Votre navigateur ne supporte pas les vidéos HTML5.
         </video>
     </div>
     <p class="image-description">Une deuxième version du site créée avec un <strong>carousel</strong> d'images.  </p>
 
-    
+    <footer class="footer">
+        <p>Site créé par Sami :)</p>
+    </footer>
 
     <script src="js/workspages.js"></script>
 </body>

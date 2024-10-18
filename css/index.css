@@ -273,13 +273,6 @@ body {
     font-weight: bold;
 }
 
-.f11 { 
-    font-size: 1.1vh;
-    position: absolute;
-    padding-top: 93vh;
-    padding-left: 81vw;
-    
-}
 
 
 /* Style spécifique pour la touche Espace */
@@ -314,7 +307,6 @@ body {
 
 @media (max-height: 900px) or (max-width: 1800px) {
     .platform,
-    .f11,
     .character,
     .controls {
         display: none; 
@@ -323,7 +315,7 @@ body {
     
 }
 
-@media (min-width: 1960px) {
+@media (min-width: 2200px) {
     #littlenav {
         margin-left: 5vw;
     }
@@ -334,7 +326,6 @@ body {
 
     .platform,
     .character,
-    .f11,
     .controls {
         display: none; 
     }
@@ -365,7 +356,13 @@ body {
 }
 }
 
-
+@media (min-width: 2100px) {
+    .platform,
+    .character,
+    .controls {
+        display: none; 
+    }
+}
 
 @media (max-width: 800px) {
     #littlenav {

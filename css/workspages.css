@@ -271,6 +271,13 @@ video {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 17px;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
 }
 
+.footer p{
+    text-align: center;
+    padding: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+}

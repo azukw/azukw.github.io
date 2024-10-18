@@ -143,7 +143,7 @@ h1.hello span {
     margin: 20vh 0;
 }
 
-@media (min-width: 1960px) {
+@media (min-width: 2200px) {
     .divider {
         margin: 10vh;
     }
@@ -163,6 +163,7 @@ h1.hello span {
         font-size: 8vw;
     }
 }
+
 
 @media (max-width: 768px) {
     .container {
