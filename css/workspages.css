@@ -214,6 +214,7 @@ body {
     aspect-ratio: 2 / 1; /* Ratio 600x300 */
 }
 
+
 /* Responsiveness - Adjust layout for smaller screens */
 @media (max-width: 768px) {
     .image-gallery {
@@ -258,10 +259,11 @@ body {
 }
 
 video {
+    border-radius: 50px;
     margin-top: 30px;
     margin-bottom: 75px;
-    padding-left: 10%;
-    width: 90%;
+    margin-left: 10%;
+    width: 80%;
     height: 100%;
     object-fit: cover;
 }
