@@ -160,7 +160,11 @@ h1.hello span {
     }
     
     h1.hello {
-        font-size: 8vw;
+        font-size: 7vw;
+    }
+
+    .subtext {
+        font-size: 1vw;
     }
 }
 

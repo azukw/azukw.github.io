@@ -156,7 +156,7 @@ body {
     text-transform: uppercase;
     font-variation-settings: 'STYL' 100;
     margin-bottom: 5px;
-    color: #fff;
+    color: #f8f1eb;
     white-space: nowrap;
     transition: 0.5s;
 }
@@ -248,4 +248,167 @@ rouge bleu larrnon vert rose
 .work-description h2,
 .work-description p {
     transition: all 0.9s ease;
+}
+
+@media (min-width: 2200px) {
+    .divider {
+        margin: 10vh;
+    }
+    .hover-image{
+        display: none;
+    }
+    .work-container {
+        overflow: hidden; /* Masquer le dépassement du container */
+        align-items: center;
+        display:flexbox;
+        max-width: 50vw;
+        max-height: 70vh;
+    }
+
+    #title{
+        padding-top: 10vh;
+        font-size: 2vw;
+    }
+
+    #description {
+        width: 10vw;
+        font-size: 0.5vw;
+    }
+
+    .work-projects {
+        height: 70vh; /* Limiter la hauteur */
+        overflow-y: auto; /* Permettre le défilement vertical si la liste dépasse */
+        padding-right: 10px; /* Pour éviter que le texte touche les bords */
+        
+    }
+    .work-projects h1 {
+        font-size: 3vw;
+    }
+
+    .work-projects p {
+        font-size: 1vw;
+    }
+}
+
+/* Ajout de media queries pour mobile */
+@media (max-width: 1000px) {
+    /* Ajuster la disposition des projets et descriptions */
+
+    * { align-items: center; text-align: center;}
+
+    #title{
+        padding-top: 5vh;
+        font-size: 8vw;
+        padding-left: 8vw;
+    }
+
+    #description {
+        margin-bottom: 17vh;
+        padding-left: 8vw;
+        width: 100vw;
+        height: 1vh;
+        font-size: 2vw;
+    }
+
+    .work-description {
+        width: 100%;
+        padding: 0 20px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .work-container {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 20px;
+    }
+
+
+    .work-projects {
+        width: 100%;
+        padding-top: 15vh ;
+        padding-left: 12vw;
+        overflow-y: auto;
+    }
+
+    /* Les images ne s'affichent pas sur les petits écrans */
+    .hover-image {
+        display: none;
+    }
+
+
+    .work-description p {
+        font-size: 4vw;
+        line-height: 1.6;
+    }
+
+    .project h1 {
+        font-size: 8vw;
+    }
+
+    .project p {
+        font-size: 3.5vw;
+    }
+}
+
+
+/* Ajout de media queries pour mobile */
+@media (max-width: 800px) {
+    /* Ajuster la disposition des projets et descriptions */
+
+    * { align-items: center; text-align: center;}
+
+    #title{
+        padding-top: 5vh;
+        font-size: 8vw;
+        padding-left: 8vw;
+    }
+
+    #description {
+        margin-bottom: 10vh;
+        padding-left: 8vw;
+        width: 100vw;
+        height: 1vh;
+        font-size: 2vw;
+    }
+
+    .work-description {
+        width: 100%;
+        padding: 0 20px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .work-container {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 20px;
+    }
+
+
+    .work-projects {
+        width: 100%;
+        padding-top: 5vh ;
+        padding-left: 12vw;
+        overflow-y: auto;
+    }
+
+    /* Les images ne s'affichent pas sur les petits écrans */
+    .hover-image {
+        display: none;
+    }
+
+
+    .work-description p {
+        font-size: 4vw;
+        line-height: 1.6;
+    }
+
+    .project h1 {
+        font-size: 10vw;
+    }
+
+    .project p {
+        font-size: 3.5vw;
+    }
 }

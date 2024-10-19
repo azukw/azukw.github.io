@@ -51,34 +51,57 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// Sélectionner tous les éléments de projet
-const projects = document.querySelectorAll('.project');
+document.addEventListener("DOMContentLoaded", () => {
+    let resetTimeout; // Variable pour stocker le timeout
 
-// Sélectionner les éléments de la description
-const titleElement = document.getElementById('title');
-const descriptionElement = document.getElementById('description');
-const projectImage = document.getElementById('project-image');
+    // Function to check screen width
+    function isSmallOrLargeScreen() {
+        return window.innerWidth < 1200 || window.innerWidth > 2200;
+    }
 
-// Parcourir chaque projet
-projects.forEach(project => {
-    // Ajouter un écouteur d'événements pour le survol (hover)
-    project.addEventListener('mouseenter', () => {
-        // Récupérer les données de l'attribut 'data-*' de chaque projet
-        const newTitle = project.getAttribute('data-title');
-        const newDescription = project.getAttribute('data-description');
-        const newImage = project.getAttribute('data-image');
-        
-        // Mettre à jour le contenu de la section description
-        titleElement.textContent = newTitle;
-        descriptionElement.textContent = newDescription;
-        projectImage.src = newImage;
-        projectImage.style.opacity = '1';  // Rendre l'image visible
-    });
+    // Select all the project elements
+    const projects = document.querySelectorAll('.project');
 
-    // Optionnel: Revenir au contenu par défaut lorsqu'on quitte le survol
-    project.addEventListener('mouseleave', () => {
-        titleElement.textContent = 'PROJETS';
-        descriptionElement.textContent = 'Ces projets ont été pour la plupart réalisés pendant ma Licence Informatique à Rennes. Pendant ces trois années, j\'ai pu acquérir de l\'expérience en programmation, ce qui me permet de toujours améliorer mes projets.';
-        projectImage.style.opacity = '0';  // Cacher l'image
+    // Select the title and description elements in the description section
+    const titleElement = document.getElementById('title');
+    const descriptionElement = document.getElementById('description');
+    const hoverImage = document.getElementById('project-image'); // Image element
+
+    // Default content
+    const defaultTitle = 'PROJETS';
+    const defaultDescription = 'Ces projets ont été pour la plupart réalisés pendant ma Licence Informatique à Rennes. Pendant ces trois années, j\'ai pu acquérir de l\'expérience en programmation, ce qui me permet de toujours améliorer mes projets.';
+
+    // Add hover (mouseenter) event to each project
+    projects.forEach(project => {
+        project.addEventListener('mouseenter', () => {
+            if (!isSmallOrLargeScreen()) {
+                // Annuler la réinitialisation précédente si l'utilisateur survole un autre projet
+                clearTimeout(resetTimeout);
+
+                // Get data-title and data-description from the hovered project
+                const newTitle = project.getAttribute('data-title');
+                const newDescription = project.getAttribute('data-description');
+                const newImage = project.getAttribute('data-image');
+
+                // Update the title and description dynamically
+                titleElement.textContent = newTitle;
+                descriptionElement.textContent = newDescription;
+
+                // Update image dynamically and make sure it's visible
+                hoverImage.src = newImage;
+                hoverImage.style.opacity = '1';
+            }
+        });
+
+        project.addEventListener('mouseleave', () => {
+            if (!isSmallOrLargeScreen()) {
+                // Réinitialiser le texte et cacher l'image après un délai (par exemple, 1 seconde)
+                resetTimeout = setTimeout(() => {
+                    titleElement.textContent = defaultTitle; // Default title
+                    descriptionElement.textContent = defaultDescription; // Default description
+                    hoverImage.style.opacity = '0'; // Hide image
+                }, 500); 
+            }
+        });
     });
 });

@@ -21,7 +21,6 @@
 body {
     font-family: Arial, sans-serif;
     color: #333;
-    background-color: #ece7e1;
     overflow-x: hidden;
 }
 
@@ -65,7 +64,7 @@ body {
 }
 
 .sidebar a:hover {
-    color: #0303037e; /* Optional: change text color on hover */
+    color: #0000007e; /* Optional: change text color on hover */
 }
 
 
@@ -215,11 +214,78 @@ body {
 }
 
 
+
+/* Quand l'écran dépasse 2200px de largeur */
+@media screen and (min-width: 2200px) {
+    body {
+        background-color: white; /* Le fond blanc autour */
+        overflow-y: scroll; /* Permettre le défilement vertical si nécessaire */
+        
+    }
+    
+    .container::-webkit-scrollbar {
+        width: 10px;
+    }
+    .title {
+        font-size: 5vw;
+    }
+
+    .description {
+        font-size: 1.5vw;
+    }
+    .container {
+        max-width: 1600px; /* Largeur du rectangle centré */
+        max-height: 900px; /* Limiter la hauteur du rectangle */
+        margin: 50px auto; /* Centrer horizontalement avec un espace en haut */
+        padding: 40px; /* Un peu d'espace à l'intérieur */
+        margin-top: 0;
+        padding-top: 0; 
+        overflow: auto; /* Assurer le défilement à l'intérieur du rectangle si le contenu est trop grand */
+    }
+    
+    /* Ajuster les éléments internes pour ne pas dépasser du conteneur */
+    .content-section, .image-gallery, .video-container, .footer {
+        max-width: 100%;
+        overflow: hidden; /* Eviter les débordements */
+    }
+
+    .image-gallery img {
+        width: 100%; /* Adapter les images à la largeur du conteneur */
+        height: auto;
+    }
+    
+    video {
+        width: 100%; /* Adapter les vidéos à la largeur du conteneur */
+        height: auto;
+    }
+}
+
 /* Responsiveness - Adjust layout for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 1208px) {
+    .brown-rectangle {width: 80vw;}
+    .sidebar {padding-right: 4vw;}
     .image-gallery {
         grid-template-columns: 1fr 1fr; /* 2 colonnes pour les écrans plus petits */
     }
+    .image-gallery {
+        grid-template-columns: 1fr; /* 1 colonne pour les très petits écrans */
+    }
+
+    .image-gallery img.wide {
+        grid-column: span 1; /* Les images larges occuperont une colonne entière sur petits écrans */
+    }
+    .image-gallery img.large {
+    width: 100%; 
+    height: auto; /* La hauteur s'ajuste automatiquement */
+    object-fit: cover; /* L'image est ajustée pour remplir son conteneur */
+    border-radius: 5px;
+    aspect-ratio: auto; /* Pas de ratio spécifique, taille libre */
+    grid-column: span 3; /* Prend trois colonnes pour les aligner différemment */
+    margin-bottom: 50px;
+
+    }
+    .image-description {padding: 10vw;}
+
 }
 
 @media (max-width: 480px) {
@@ -242,6 +308,7 @@ body {
     margin-bottom: 50px;
 
 }
+    
 
 
 /* Animations */
@@ -259,6 +326,7 @@ body {
 }
 
 video {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); 
     border-radius: 50px;
     margin-top: 30px;
     margin-bottom: 75px;
