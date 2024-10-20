@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Share+Tech+Mono&display=swap');
 
-/* General reset */
+
+  
 * {
     margin: 0;
     padding: 0;
@@ -27,9 +28,8 @@ body {
     align-items: center;
 }
 
-/* Vertical Sidebar */
 .sidebar {
-    font-family: "Poppins", monospace;
+    font-family: "Share Tech Mono", monospace;
     font-size: 200;
     position: fixed;
     left: 0;
@@ -42,7 +42,6 @@ body {
     align-items: center;
 }
 
-/* Sidebar link with strikethrough animation */
 .sidebar a {
     position: relative;
     color: #f8f1eb;
@@ -54,7 +53,7 @@ body {
 .sidebar a::before {
     content: '';
     position: absolute;
-    width: 0%; /* Initially, no width */
+    width: 0%; 
     height: 2px;
     background-color: #ffffff;
     top: 65%;
@@ -92,7 +91,6 @@ body {
     margin: 200px 0;
 }
 
-/* Main container for the work section */
 .work-container {
     background-color: #1a1818;
     display: flex;
@@ -105,7 +103,6 @@ body {
     transition: all 1s ease;
 }
 
-/* Left description section */
 .work-description {
     width: 35%;
     padding-left: 200px;
@@ -130,7 +127,6 @@ body {
     max-width: 400px;
 }
 
-/* Right scrollable project section */
 .work-projects {
     width: 60%;
     overflow-y: scroll;
@@ -146,7 +142,6 @@ body {
     width: 10px;
 }
 
-/* Individual project entry */
 .project {
     margin-bottom: 50px;
 }
@@ -168,8 +163,6 @@ body {
     background-repeat: repeat-x;
 }
 
-
-rouge bleu larrnon vert rose
 
 .project-orange h1:hover {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ff9800' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
@@ -195,17 +188,16 @@ rouge bleu larrnon vert rose
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='rgb(234,182,118)' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
 }
 
-
 .project a {
     text-decoration: none;
 }
 
 .project p {
+    font-family: "Nyxerin", sans-serif;
     font-size: 1.5vw;
     color: #777;
 }
 
-/* Container for the hover image */
 .hover-image {
     right: 1.3vw;
     position: relative;
@@ -214,19 +206,17 @@ rouge bleu larrnon vert rose
     transition: height 0.5s ease;
 }
 
-/* Gestion de l'image dans .hover-image pour éviter le zoom */
 .hover-image img {
     
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Contenir l'image sans la couper ni l'étirer */
+    object-fit: contain; 
     display: block;
     opacity: 0;
     transition: opacity 0.5s ease, transform 0.5s ease;
-    max-width: 600px; /* Limiter la taille maximale de l'image */
+    max-width: 600px; 
     max-height: 600px;
 }
-
 
 .project:hover ~ .work-description .hover-image img {
     opacity: 1;
@@ -251,18 +241,25 @@ rouge bleu larrnon vert rose
 }
 
 @media (min-width: 2200px) {
+    body {
+        background-color: #1a1818;
+    }
+    .sidebar p{
+        letter-spacing: 0.1vw;
+    }
+
     .divider {
-        margin: 10vh;
+        margin: 20vh;
     }
     .hover-image{
         display: none;
     }
     .work-container {
-        overflow: hidden; /* Masquer le dépassement du container */
+        overflow: hidden; 
         align-items: center;
         display:flexbox;
         max-width: 50vw;
-        max-height: 70vh;
+        max-height: 100vh;
     }
 
     #title{
@@ -276,9 +273,9 @@ rouge bleu larrnon vert rose
     }
 
     .work-projects {
-        height: 70vh; /* Limiter la hauteur */
-        overflow-y: auto; /* Permettre le défilement vertical si la liste dépasse */
-        padding-right: 10px; /* Pour éviter que le texte touche les bords */
+        height: 100vh; 
+        overflow-y: auto; 
+        padding-right: 10px; 
         
     }
     .work-projects h1 {
@@ -290,9 +287,8 @@ rouge bleu larrnon vert rose
     }
 }
 
-/* Ajout de media queries pour mobile */
 @media (max-width: 1000px) {
-    /* Ajuster la disposition des projets et descriptions */
+    
 
     * { align-items: center; text-align: center;}
 
@@ -323,7 +319,6 @@ rouge bleu larrnon vert rose
         padding-top: 20px;
     }
 
-
     .work-projects {
         width: 100%;
         padding-top: 15vh ;
@@ -331,11 +326,10 @@ rouge bleu larrnon vert rose
         overflow-y: auto;
     }
 
-    /* Les images ne s'affichent pas sur les petits écrans */
+    
     .hover-image {
         display: none;
     }
-
 
     .work-description p {
         font-size: 4vw;
@@ -351,10 +345,8 @@ rouge bleu larrnon vert rose
     }
 }
 
-
-/* Ajout de media queries pour mobile */
 @media (max-width: 800px) {
-    /* Ajuster la disposition des projets et descriptions */
+    
 
     * { align-items: center; text-align: center;}
 
@@ -385,7 +377,6 @@ rouge bleu larrnon vert rose
         padding-top: 20px;
     }
 
-
     .work-projects {
         width: 100%;
         padding-top: 5vh ;
@@ -393,11 +384,10 @@ rouge bleu larrnon vert rose
         overflow-y: auto;
     }
 
-    /* Les images ne s'affichent pas sur les petits écrans */
+    
     .hover-image {
         display: none;
     }
-
 
     .work-description p {
         font-size: 4vw;
@@ -411,4 +401,70 @@ rouge bleu larrnon vert rose
     .project p {
         font-size: 3.5vw;
     }
+}
+
+@media (max-width: 800px) {
+    
+
+    #title{
+        padding-top: 5vh;
+        font-size: 12vw;
+        padding-left: 8vw;
+    }
+
+    #description {
+        margin-bottom: 10vh;
+        padding-left: 8vw;
+        width: 60vw;
+        height: 1vh;
+        font-size: 3vw;
+    }
+
+    .work-projects {
+        width:100%;
+        padding-top: 10vh;
+        padding-left: 15vw;
+        overflow-y: auto;
+    }
+
+    .sidebar {
+        width: 12vw;
+    }
+}
+
+@media (max-height: 500px) {
+    #title{
+        padding-top: 50vh;
+        font-size: 6vw;
+        padding-left: 8vw;
+    }
+
+    #description {
+        margin-bottom: 100vh;
+        padding-left: 8vw;
+        width: 30vw;
+        height: 1vh;
+        font-size: 1.5vw;
+    }
+
+    .work-container {
+        flex-direction:row;
+        justify-content: flex-start;
+    }
+    .work-projects {
+        width: 100%;
+        padding-right: 15vw;
+        overflow-y: auto;
+    }
+
+    .divider {
+        height: 15vh;
+        margin:20vh;
+    }
+
+    .project h1 {
+        font-size: 7vw;
+    }
+
+    
 }

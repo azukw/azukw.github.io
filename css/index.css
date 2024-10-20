@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Share+Tech+Mono&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
@@ -26,9 +27,10 @@ body {
     color: #000;
 }
 
-/* Vertical Sidebar */
 .sidebar {
     font-family: "Share Tech Mono", monospace;
+    
+    font-size: 200;
     position: fixed;
     left: 0;
     top: 0;
@@ -50,7 +52,7 @@ body {
 .vertical-text {
     transform: rotate(-90deg);
     text-transform: uppercase;
-    letter-spacing: 0.3vw;
+    letter-spacing: 0.8vw;
 }
 
 .divider {
@@ -126,43 +128,33 @@ body {
     transition: color 0.3s;
 }
 
-
-/* Le terrain (éléments de la page) */
-/* Le terrain (éléments de la page) */
 .platform {
-    pointer-events: none; /* Laisse ça si tu veux désactiver l'interaction des plateformes */
+    pointer-events: none; 
     position: absolute;
     overflow: hidden;
     background-color: #1a1818;
-    z-index: 1; /* S'assure que les plateformes sont derrière les éléments interactifs */
+    z-index: 1; 
 }
 
-/* Ajoute z-index aux éléments interactifs */
 .navigation, .info {
-    z-index: 2; /* Assure que les éléments interactifs sont devant */
+    z-index: 2; 
 }
 
 .character {
-    z-index: 3; /* Place le personnage au-dessus des plateformes et des autres éléments si besoin */
+    z-index: 3; 
 }
 
 .sidebar {
-    z-index: 2; /* Assure que la sidebar est cliquable */
+    z-index: 2; 
 }
-
 
 #littlenav {
     margin-left: 13vw;
-    max-width: 10vw; /* Ajustez la largeur selon vos besoins */
+    max-width: 10vw; 
     display: inline-block;
     text-align: center;
 }
 
-
-
-
-
-/* Plateformes aux bords de l'écran */
 #top-platform {
     position: fixed;
     top: 0;
@@ -234,9 +226,6 @@ body {
     background-color: #ff7700;
 }
 
-
-
-/* Personnage */
 .character {
     cursor: pointer;
     left: 25vw;
@@ -247,7 +236,6 @@ body {
     background-color: #1a1818;
 }
 
-/* Section des touches de contrôle */
 .controls {
     position: absolute;
     top: 9vh; 
@@ -258,7 +246,6 @@ body {
     font-family: "Share Tech Mono", monospace;
 }
 
-/* Style pour chaque touche */
 .key {
     display: inline-block;
     width: 1.5vw;
@@ -273,19 +260,14 @@ body {
     font-weight: bold;
 }
 
-
-
-/* Style spécifique pour la touche Espace */
 .key.space {
-    width: 3.5vw; /* Largeur plus grande pour ressembler à une barre d'espace */
+    width: 3.5vw; 
 }
 
-/* Alignement en croix pour ZQSD */
 .key-row {
     display: flex;
     justify-content: center;
 }
-
 
 .controls p {
     font-family: "june-expt-variable", sans-serif;
@@ -294,16 +276,11 @@ body {
     font-weight: 500;
 }
 
-/* Ajustement de l'espacement pour PRO JETS et CON TACT */
 .responsive-text .first-part,
 .responsive-text .second-part {
-    line-height: 0.9; /* Réduit l'espacement vertical entre les parties */
-    margin-bottom: 0.5vh; /* Ajuste l'espacement entre les mots */
+    line-height: 0.9; 
+    margin-bottom: 0.5vh; 
 }
-
-
-
-
 
 @media (max-height: 900px) or (max-width: 1800px) {
     .platform,
@@ -316,12 +293,25 @@ body {
 }
 
 @media (min-width: 2200px) {
+    body {
+        background-color: #f8f1eb;
+    }
+    .sidebar {
+        
+        background-color: #f8f1eb;
+    }
     #littlenav {
         margin-left: 5vw;
     }
 
+    .sidebar p{
+        color: #1a1818;
+        letter-spacing: 0.1vw;
+    }
+
     .divider {
-        margin: 10vh;
+        background-color: #1a1818;
+        margin: 20vh;
     }
 
     .platform,
@@ -334,14 +324,14 @@ body {
         align-items: center;
         display:flexbox;
         max-width: 50vw;
-        max-height: 70vh;
+        max-height: 100vh;
     }
     .navigation {
         margin-left: 5vw;
         margin-right: 5vw;
         font-size: 5vw;
         padding-left: 0;
-        line-height: 1.1; /* Moins d'espacement vertical */
+        line-height: 1.1; 
     }
 
     .info {
@@ -381,46 +371,45 @@ body {
         font-size: 15vw;
     }
 
-    /* Casser les mots sur deux lignes */
+    
     .responsive-text .first-part,
     .responsive-text .second-part {
         display: block;
     }
 }
-/* Entre 320px et 767px (smartphones standards) */
+
 @media (max-width: 475px) {
     .sidebar {
         width: 15vw;
     }
 
-    /* Ajuster la disposition en colonne pour que la section info passe sous la navigation */
+    
     .container {
         max-height: 100vh;
-        flex-direction: column; /* Empile la navigation et l'info verticalement */
-        align-items: center;    /* Centrer les éléments */
+        flex-direction: column; 
+        align-items: center;    
     }
 
-    /* Ajustement de la navigation */
+    
     .navigation {
         min-height: 60vh;
         padding: 0;
-        padding-top: 5vh;
+        padding-top: 10vh;
         padding-left: 10vw;
         text-align: center;
-        font-size: 20vw; /* Ajuste la taille de la navigation */
+        font-size: 20vw; 
     }
 
-    /* Ajustement de la section info */
+    
     .info {
         min-height:20vh;
         padding: 0;
         padding-left: 10vw;
-        padding-top: 5vh;
-        max-width: 90vw; /* Ajuste la largeur de la section info */
+        max-width: 80vw; 
         text-align: center;
     }
 
-    /* Ajustement du texte dans info */
+    
     .name {
         font-size: 5vw;
     }
@@ -433,7 +422,7 @@ body {
         letter-spacing: 1px;
     }
 
-    /* Casser les mots sur deux lignes */
+    
     .responsive-text .first-part,
     .responsive-text .second-part {
         display: block;
@@ -441,9 +430,9 @@ body {
 }
 
 @media (max-width: 375px) {
-    /* Ajustement de la navigation */
+    
     .navigation {
         padding-top: 10vh;
-        font-size: 23vw; /* Ajuste la taille de la navigation */
+        font-size: 23vw; 
     }
 }

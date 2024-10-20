@@ -1,37 +1,32 @@
 window.addEventListener('load', () => {
-    // Get the work section container
+
     const workSection = document.getElementById('main-content');
 
-    // Add a slight delay to make sure the transition feels smooth
     setTimeout(() => {
         workSection.style.transform = 'translateY(0)';
         workSection.style.opacity = '1';
-    }, 200);  // 200ms delay for a smooth load-in
+    }, 200);  
 });
 
-// Sélection du personnage et des plateformes
 const character = document.getElementById('character');
 const platforms = document.querySelectorAll('.platform');
 
-// Variables de mouvement
 let velocityX = 0;
 let velocityY = 0;
-let posX = 470; // Position initiale X
-let posY = 485; // Position initiale Y
+let posX = 470; 
+let posY = 485; 
 let isJumping = false;
-let isMoving = false; // Nouvelle variable pour indiquer si le personnage commence à bouger
-const gravity = 0.5; // Gravité simulée
-const jumpStrength = -19; // Force de saut
-const moveSpeed = 5; // Vitesse de déplacement
+let isMoving = false; 
+const gravity = 0.5; 
+const jumpStrength = -19; 
+const moveSpeed = 5; 
 
-// Appliquer la gravité même sans saut
 function applyGravity() {
     velocityY += gravity;
 }
 
-// Écouteur des touches du clavier
 document.addEventListener('keydown', (event) => {
-    isMoving = true; // Marquer que le personnage commence à bouger lorsqu'une touche est pressée
+    isMoving = true; 
 
     if (event.key === 'ArrowRight') {
         velocityX = moveSpeed;
@@ -40,99 +35,83 @@ document.addEventListener('keydown', (event) => {
         velocityX = -moveSpeed;
     }
     if (event.key === ' ' && !isJumping || event.key === 'ArrowUp' && !isJumping) {
-        velocityY = jumpStrength; // Sauter
+        velocityY = jumpStrength; 
         isJumping = true;
     }
 });
 
 character.addEventListener('click', () => {
-    isMoving = true; // Active le mouvement du personnage lorsqu'on clique dessus
+    isMoving = true; 
 });
 
-
-// Arrêt du mouvement horizontal quand la touche est relâchée
 document.addEventListener('keyup', (event) => {
     if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
         velocityX = 0;
     }
 });
 
-// Ajuster les variables pour limiter la vitesse de chute
-const maxFallSpeed = 20; // Vitesse maximale de chute pour éviter de traverser les plateformes
+const maxFallSpeed = 20; 
 
-// Fonction de détection de collision avec une plateforme améliorée
 function checkCollision() {
     platforms.forEach(platform => {
         const platformRect = platform.getBoundingClientRect();
         const characterRect = character.getBoundingClientRect();
 
-        // Collision avec le haut de la plateforme
         if (characterRect.bottom >= platformRect.top &&
-            characterRect.bottom <= platformRect.top + Math.abs(velocityY) && // Tolérance dépendante de la vitesse
+            characterRect.bottom <= platformRect.top + Math.abs(velocityY) && 
             characterRect.right > platformRect.left &&
             characterRect.left < platformRect.right &&
-            velocityY >= 0) { // Vérifier si le personnage descend
+            velocityY >= 0) { 
 
-            velocityY = 0; // Arrêter la vitesse verticale
-            posY = platformRect.top - characterRect.height; // Replacer le personnage sur la plateforme
+            velocityY = 0; 
+            posY = platformRect.top - characterRect.height; 
             isJumping = false;
         }
 
-        // Collision avec le bas de la plateforme
         if (characterRect.top <= platformRect.bottom &&
-            characterRect.top >= platformRect.bottom - Math.abs(velocityY) && // Tolérance dépendante de la vitesse
+            characterRect.top >= platformRect.bottom - Math.abs(velocityY) && 
             characterRect.right > platformRect.left &&
             characterRect.left < platformRect.right &&
-            velocityY < 0) { // Vérifier si le personnage monte
+            velocityY < 0) { 
 
-            velocityY = gravity; // Forcer le personnage à retomber
+            velocityY = gravity; 
         }
     });
 }
 
-// Appliquer la gravité en limitant la vitesse de chute
 function applyGravity() {
     velocityY += gravity;
 
-    // Limiter la vitesse de chute
     if (velocityY > maxFallSpeed) {
         velocityY = maxFallSpeed;
     }
 }
 
-// Boucle de jeu pour mettre à jour la position du personnage
 function gameLoop() {
-    // Ne commencer à bouger que si une touche a été pressée
+
     if (isMoving) {
-        // Appliquer la gravité
+
         applyGravity();
 
-        // Mettre à jour la position
         posX += velocityX;
         posY += velocityY;
 
-        // Limites de la fenêtre (rebords)
         if (posX < 0) posX = 0;
         if (posX > window.innerWidth - character.offsetWidth) posX = window.innerWidth - character.offsetWidth;
 
-        // Empêcher le personnage de traverser le bas de l'écran
         if (posY > window.innerHeight - character.offsetHeight) {
             posY = window.innerHeight - character.offsetHeight;
             velocityY = 0;
             isJumping = false;
         }
 
-        // Appliquer la position
         character.style.left = posX + 'px';
         character.style.top = posY + 'px';
 
-        // Vérifier les collisions
         checkCollision();
     }
 
-    // Demander une nouvelle frame d'animation
     requestAnimationFrame(gameLoop);
 }
 
-// Démarrer la boucle de jeu
 gameLoop();
