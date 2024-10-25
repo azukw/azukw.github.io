@@ -354,6 +354,7 @@ body {
     }
 }
 
+/* Ajustements CSS pour la compatibilité mobile */
 @media (max-width: 800px) {
     #littlenav {
         margin-left: 5vw;
@@ -368,10 +369,29 @@ body {
     }
 
     .navigation {
-        font-size: 15vw;
+        font-size: 12vw; /* Réduction de la taille de la police */
+        line-height: 1.2; /* Ajustement de l'espacement des lignes */
+        padding-top: 5vh; /* Espacement supérieur pour éviter le chevauchement */
+    }
+    
+    .info {
+        padding-top: 5vh; /* Ajout d'espacement en haut */
+        padding-bottom: 5vh; /* Ajout d'espacement en bas */
+        margin-bottom: 5vh; /* Espace supplémentaire en bas pour séparer de la navigation */
+        max-width: 90vw;
+        text-align: center;
     }
 
-    
+    .name {
+        font-size: 4.5vw; /* Taille plus petite */
+        margin-bottom: 2vh;
+    }
+
+    .details {
+        font-size: 3.5vw; /* Taille plus petite */
+        line-height: 1.2; /* Ajustement pour un meilleur espacement */
+    }
+
     .responsive-text .first-part,
     .responsive-text .second-part {
         display: block;
@@ -383,46 +403,36 @@ body {
         width: 15vw;
     }
 
-    
     .container {
         max-height: 100vh;
         flex-direction: column; 
-        align-items: center;    
+        align-items: center;
     }
 
-    
     .navigation {
-        min-height: 60vh;
-        padding: 0;
-        padding-top: 10vh;
-        padding-left: 10vw;
-        text-align: center;
-        font-size: 20vw; 
+        font-size: 18vw; /* Réduction de la taille pour le portrait */
+        padding-left: 5vw; /* Moins de marge gauche */
     }
 
-    
     .info {
-        min-height:20vh;
-        padding: 0;
-        padding-left: 10vw;
-        padding-top: 10vh;
+        padding: 5vh 5vw; /* Padding uniforme */
         max-width: 80vw; 
         text-align: center;
     }
 
-    
     .name {
-        font-size: 5vw;
+        font-size: 6vw;
+        margin-bottom: 2vh;
     }
 
     .details {
         font-size: 4vw;
+        margin-bottom: 2vh;
     }
 
     .responsive-text {
         letter-spacing: 1px;
     }
-
     
     .responsive-text .first-part,
     .responsive-text .second-part {
@@ -431,9 +441,14 @@ body {
 }
 
 @media (max-width: 375px) {
-    
     .navigation {
-        padding-top: 10vh;
-        font-size: 23vw; 
+        padding-top: 8vh;
+        font-size: 20vw; /* Encore plus petite pour le portrait */
+        line-height: 1.1; /* Ajustement pour un meilleur espacement des lignes */
+    }
+
+    .info {
+        padding-top: 6vh; 
+        padding-bottom: 6vh;
     }
 }
