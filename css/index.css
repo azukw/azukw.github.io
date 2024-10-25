@@ -369,9 +369,10 @@ body {
     }
 
     .navigation {
+
         font-size: 12vw;
-        line-height: 1.5; /* Augmentation pour plus d'espace entre les éléments */
-        padding-top: 5vh;
+        line-height: 2.5; /* Augmentation pour plus d'espace entre les éléments */
+        padding-top: 15vh;
         padding-left: 5vw; /* Ajustement du padding gauche pour mieux centrer */
         margin-bottom: 5vh; /* Ajouter un espace sous la navigation */
     }
