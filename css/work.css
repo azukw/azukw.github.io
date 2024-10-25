@@ -35,7 +35,7 @@ body {
     left: 0;
     top: 0;
     bottom: 0;
-    width: 100px;
+    width: 5vw;
     background-color: #1a1818;
     display: flex;
     justify-content: center;
@@ -54,10 +54,10 @@ body {
     content: '';
     position: absolute;
     width: 0%; 
-    height: 2px;
+    height: 0.2vh;
     background-color: #ffffff;
-    top: 65%;
-    left: 50%;
+    top: 65vh;
+    left: 50vw;
     transform: translate(-50%, -50%) rotate(90deg);
     transition: width 0.3s ease-in-out;
 }
@@ -80,15 +80,15 @@ body {
 .vertical-text {
     transform: rotate(-90deg);
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 0.25vw;
 }
 
 .divider {
-    width: 1px;
-    height: 200px;
+    width: 0.05vw;
+    height: 20vh;
     background-color: #f8f1eb;
     border: none;
-    margin: 200px 0;
+    margin: 20vh 0;
 }
 
 .work-container {
@@ -105,7 +105,7 @@ body {
 
 .work-description {
     width: 35%;
-    padding-left: 200px;
+    padding-left: 10vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -116,41 +116,41 @@ body {
 
 .work-description h2 {
     font-size: 1.5vw;
-    margin-bottom: 20px;
+    margin-bottom: 2vh;
     color: #f8f1eb;
 }
 
 .work-description p {
     font-size: 1.2vw;
-    line-height: 1.4;
-    margin-bottom: 20px;
-    max-width: 400px;
+    line-height: 3.4vh;
+    margin-bottom: 2vh;
+    max-width: 20vw;
 }
 
 .work-projects {
     width: 60%;
     overflow-y: scroll;
     height: 100vh;
-    padding-right: 20px;
-    padding-top: 300px;
+    padding-right: 1vw;
+    padding-top: 30vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .work-projects::-webkit-scrollbar {
-    width: 10px;
+    width: 0.1vw;
 }
 
 .project {
-    margin-bottom: 50px;
+    margin-bottom: 5vh;
 }
 
 .project h1 {
     font-size: 8vw;
     text-transform: uppercase;
     font-variation-settings: 'STYL' 100;
-    margin-bottom: 5px;
+    margin-bottom: 0.5vh;
     color: #f8f1eb;
     white-space: nowrap;
     transition: 0.5s;
@@ -193,7 +193,7 @@ body {
 }
 
 .project p {
-    font-family: "Nyxerin", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1.5vw;
     color: #777;
 }
@@ -214,8 +214,8 @@ body {
     display: block;
     opacity: 0;
     transition: opacity 0.5s ease, transform 0.5s ease;
-    max-width: 600px; 
-    max-height: 600px;
+    max-width: 30vw; 
+    max-height: 60vh;
 }
 
 .project:hover ~ .work-description .hover-image img {
@@ -231,7 +231,7 @@ body {
 
 .project:hover ~ .work-description #description,
 .project:hover ~ .work-description #title {
-    transform: translateY(-80px);
+    transform: translateY(-8vh);
     transition: transform 0.5s ease;
 }
 
