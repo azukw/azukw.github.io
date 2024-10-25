@@ -405,6 +405,7 @@ body {
         min-height:20vh;
         padding: 0;
         padding-left: 10vw;
+        padding-top: 10vh;
         max-width: 80vw; 
         text-align: center;
     }
