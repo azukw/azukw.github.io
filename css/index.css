@@ -369,19 +369,21 @@ body {
     }
 
     .navigation {
-        font-size: 12vw; /* Réduction de la taille de la police */
-        line-height: 1.2; /* Ajustement de l'espacement des lignes */
-        padding-top: 5vh; /* Espacement supérieur pour éviter le chevauchement */
+        font-size: 12vw;
+        line-height: 1.5; /* Augmentation pour plus d'espace entre les éléments */
+        padding-top: 5vh;
+        padding-left: 5vw; /* Ajustement du padding gauche pour mieux centrer */
+        margin-bottom: 5vh; /* Ajouter un espace sous la navigation */
     }
     
     .info {
-        padding-top: 5vh; /* Ajout d'espacement en haut */
-        padding-bottom: 5vh; /* Ajout d'espacement en bas */
-        margin-bottom: 5vh; /* Espace supplémentaire en bas pour séparer de la navigation */
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        margin-bottom: 5vh;
         max-width: 90vw;
+        margin-left: 2vw; /* Décalage vers la gauche pour centrer */
         text-align: center;
     }
-
     .name {
         font-size: 4.5vw; /* Taille plus petite */
         margin-bottom: 2vh;
@@ -410,13 +412,16 @@ body {
     }
 
     .navigation {
-        font-size: 18vw; /* Réduction de la taille pour le portrait */
-        padding-left: 5vw; /* Moins de marge gauche */
+        font-size: 18vw;
+        line-height: 2.4; /* Ajustement du line-height pour plus d'espacement */
+        padding-left: 5vw; 
+        padding-top: 15vh;
+        margin-bottom: 7vh; /* Ajouter un espace sous la navigation */
     }
-
     .info {
-        padding: 5vh 5vw; /* Padding uniforme */
-        max-width: 80vw; 
+        padding: 5vh 5vw;
+        max-width: 80vw;
+        margin-left: 3vw; /* Décalage vers la gauche pour un meilleur centrage */
         text-align: center;
     }
 
@@ -443,12 +448,16 @@ body {
 @media (max-width: 375px) {
     .navigation {
         padding-top: 8vh;
-        font-size: 20vw; /* Encore plus petite pour le portrait */
-        line-height: 1.1; /* Ajustement pour un meilleur espacement des lignes */
+        font-size: 20vw;
+        line-height: 1.3; /* Ajustement pour augmenter l'espace entre les éléments */
+        padding-left: 5vw; 
+        margin-bottom: 8vh; /* Plus d'espace sous la navigation */
     }
 
     .info {
-        padding-top: 6vh; 
+        padding-top: 6vh;
         padding-bottom: 6vh;
+        max-width: 80vw;
+        margin-left: 5vw; /* Centrage plus marqué */
     }
 }
