@@ -354,7 +354,6 @@ body {
     }
 }
 
-/* Ajustements CSS pour la compatibilité mobile */
 @media (max-width: 800px) {
     #littlenav {
         margin-left: 5vw;
@@ -369,32 +368,10 @@ body {
     }
 
     .navigation {
-
-        font-size: 12vw;
-        line-height: 2.5; /* Augmentation pour plus d'espace entre les éléments */
-        padding-top: 15vh;
-        padding-left: 5vw; /* Ajustement du padding gauche pour mieux centrer */
-        margin-bottom: 5vh; /* Ajouter un espace sous la navigation */
+        font-size: 15vw;
     }
+
     
-    .info {
-        padding-top: 5vh;
-        padding-bottom: 5vh;
-        margin-bottom: 5vh;
-        max-width: 90vw;
-        margin-left: 2vw; /* Décalage vers la gauche pour centrer */
-        text-align: center;
-    }
-    .name {
-        font-size: 4.5vw; /* Taille plus petite */
-        margin-bottom: 2vh;
-    }
-
-    .details {
-        font-size: 3.5vw; /* Taille plus petite */
-        line-height: 1.2; /* Ajustement pour un meilleur espacement */
-    }
-
     .responsive-text .first-part,
     .responsive-text .second-part {
         display: block;
@@ -414,9 +391,9 @@ body {
 
     .navigation {
         font-size: 18vw;
-        line-height: 2.4; /* Ajustement du line-height pour plus d'espacement */
+        line-height: 2; /* Ajustement du line-height pour plus d'espacement */
         padding-left: 5vw; 
-        padding-top: 15vh;
+        padding-top: 7vh;
         margin-bottom: 7vh; /* Ajouter un espace sous la navigation */
     }
     .info {
@@ -447,18 +424,9 @@ body {
 }
 
 @media (max-width: 375px) {
+    
     .navigation {
         padding-top: 10vh;
-        font-size: 20vw;
-        line-height: 2.3; /* Ajustement pour augmenter l'espace entre les éléments */
-        padding-left: 5vw; 
-        margin-bottom: 8vh; /* Plus d'espace sous la navigation */
-    }
-
-    .info {
-        padding-top: 6vh;
-        padding-bottom: 6vh;
-        max-width: 80vw;
-        margin-left: 5vw; /* Centrage plus marqué */
+        font-size: 23vw; 
     }
 }
