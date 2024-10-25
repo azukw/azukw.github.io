@@ -447,9 +447,9 @@ body {
 
 @media (max-width: 375px) {
     .navigation {
-        padding-top: 8vh;
+        padding-top: 10vh;
         font-size: 20vw;
-        line-height: 1.3; /* Ajustement pour augmenter l'espace entre les éléments */
+        line-height: 2.3; /* Ajustement pour augmenter l'espace entre les éléments */
         padding-left: 5vw; 
         margin-bottom: 8vh; /* Plus d'espace sous la navigation */
     }
