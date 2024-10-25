@@ -308,7 +308,8 @@ body {
     }
     .main-title {
         margin-bottom: 5vh;
-        padding-top: 45vh;
+        margin-top: 10vh;
+        padding-top: 50vh;
         font-size: 18vw;
     }
 
