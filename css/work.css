@@ -359,7 +359,7 @@ body {
     #description {
         margin-bottom: 10vh;
         padding-left: 8vw;
-        width: 100vw;
+        min-width: 80vw;
         height: 1vh;
         font-size: 2vw;
     }
@@ -378,9 +378,9 @@ body {
     }
 
     .work-projects {
+        margin-top: 2vh;
         width: 100%;
-        padding-top: 5vh ;
-        padding-left: 12vw;
+        padding-left: 8vw;
         overflow-y: auto;
     }
 
@@ -432,7 +432,7 @@ body {
     }
 }
 
-@media (max-height: 500px) {
+@media (max-height: 500px) and (orientation: landscape) {
     #title{
         padding-top: 50vh;
         font-size: 6vw;

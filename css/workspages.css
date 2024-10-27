@@ -282,8 +282,10 @@ body {
 
 }
 
-@media (max-width: 480px) {
+@media (max-width: 475px) {
 
+    .container{margin-left: 5vw;
+    max-width: 100vw;}
     .roles {
         padding-left: 0vw;
         flex-direction: column;
@@ -297,12 +299,16 @@ body {
 
     .title {
         font-size: 17vw;
-        width: 80vw;
+        max-width: 80vw;
         text-align: center;
     }
     .sidebar{
-        padding-right: 13vw;
+        padding-right: 18vw;
         right: 15vw;
+    }
+
+    .divider {
+        margin: 15vh;
     }
 
     .image-gallery img.wide {
@@ -315,11 +321,6 @@ body {
     }
 }
 
-@media (max-width: 400px) {
-    .sidebar{
-        padding-right: 18vw;
-    }
-}
 
 @media (max-width: 320px) {
     .sidebar{
@@ -327,7 +328,7 @@ body {
     }
 }
 
-@media (max-height: 500px) {
+@media (orientation: landscape) {
 
     .title {
         padding-bottom: 50vh;   }
