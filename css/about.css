@@ -256,7 +256,7 @@ body {
 
     .button {
         padding: 1.5vw 3vh;
-        font-size: 2vw;
+        font-size: 2vh;
         width: 15vw;
         height: 5vh;
     }
@@ -292,7 +292,7 @@ body {
     }
 
     .button {
-        
+        margin-left: 5vw;
         padding: 2vw 3vh;
         font-size: 2.5vw;
         width: 20vw;
@@ -309,10 +309,8 @@ body {
         padding-left: 10vw;
     }
     .main-title {
-        margin-bottom: 5vh;
-        margin-top: 10vh;
-        padding-top: 50vh;
-        font-size: 18vw;
+        font-size: 8vh;
+        margin: 0;
     }
 
     .bottom-section {
@@ -320,17 +318,16 @@ body {
         width: 100%;
     }
 
+
     .column h2 {
-        font-size: 7vw;
+        font-size: 2.5vh;
     }
 
     .column p {
-        font-weight: 500;
-        font-size: 4vw;
+        font-size: 1.8vh;
     }
     .button {
         align-items: center;
-        margin-bottom: 50vh;
         padding-top: 1.5vh;
         margin-left: 5vw;
         font-size: 5vw;
@@ -338,7 +335,26 @@ body {
     }
 }
 
-@media (max-height: 800px) and (orientation: landscape) {
+@media (max-height: 900px) {
+    .main-title{
+        font-size: 8vh;
+        margin: 0;
+    }
+
+    .column h2 {
+        font-size: 2.5vh;
+    }
+
+    .column p {
+        font-size: 1.5vh;
+    }
+
+    .button {
+        margin-top: -5vh;
+    }
+}
+
+@media (max-height: 900px) and (orientation: landscape) {
     body {
         max-width: 100vw;
         max-height: 100vh;
@@ -356,8 +372,9 @@ body {
     }
 
     .main-title {
+        padding-left: 10vw;
         padding-top: 0vh;
-        font-size: 6vw;
+        font-size: 8vw;
     }
 
 
@@ -379,10 +396,9 @@ body {
     }
 
     .button {
-        margin-top: -20vh;
         margin-left: 7vw;
-        padding: 1vw 5vh;
-        font-size: 1.5vw;
+        padding: 1.5vw 5vh;
+        font-size: 2vw;
         width: 15vw;
         height: 10vh;
     }

@@ -24,6 +24,7 @@ body {
     font-variation-settings: "STYL" 50;
     color: #f8f1eb;
     height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +37,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100vw;
+    min-width: 100vw;
     transform: translateY(200vh);
     transition: all 1s ease;
 }
@@ -181,10 +182,13 @@ h1.hello span {
 
 @media (max-width: 768px) {
     body {
+        overflow: hidden;
         align-items: center;
         max-height: 120vh;
     }
     .container {
+        overflow: hidden;
+        min-width: 100vw;
         flex-direction: column;
         text-align: center;
     }
@@ -216,6 +220,7 @@ h1.hello span {
     .sidebar {
         width: 12vw;
     }
+
 }
 
 @media (max-width: 475px) {
