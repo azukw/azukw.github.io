@@ -379,28 +379,42 @@ body {
 
 
 
-/* @media (max-height: 500px) and (orientation: landscape) {
-    #title{
-        padding-top: 50vh;
-        font-size: 6vw;
-        padding-left: 8vw;
-    }
-
-    #description {
-        margin-bottom: 100vh;
-        padding-left: 8vw;
-        width: 30vw;
-        height: 1vh;
-        font-size: 1.5vw;
+@media (max-height: 800px) and (orientation: landscape) {
+    body {
+        max-width: 100vw;
+        max-height: 100vh;
     }
 
     .work-container {
         flex-direction:row;
         justify-content: flex-start;
     }
+
+    .work-description {
+        padding-bottom: 60vh;
+        width: 0vh;
+    }
+
+    #title{
+        padding-bottom: 5vh;
+        padding-left: 50vw;
+        font-size: 4vw;
+    }
+
+    #description {
+        padding-left: 50vw;
+        font-size: 2vw;
+    }
+
+    .work-projects p {
+        padding-bottom: 10vh;
+        font-size: 2vw;
+    }
+
     .work-projects {
+        height: 110%;
         width: 100%;
-        padding-right: 15vw;
+        padding-left: 35vw;
         overflow-y: auto;
     }
 
@@ -414,4 +428,4 @@ body {
     }
 
     
-} */
+}
