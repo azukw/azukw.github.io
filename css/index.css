@@ -354,7 +354,7 @@ body {
     }
 }
 
-@media (max-width: 800px) {
+/*@media (max-width: 800px) {
     #littlenav {
         margin-left: 5vw;
     }
@@ -377,8 +377,8 @@ body {
         display: block;
     }
 }
-
-@media (max-width: 475px) {
+*/
+@media (max-width: 800px) {
     .sidebar {
         width: 15vw;
     }
