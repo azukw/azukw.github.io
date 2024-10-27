@@ -65,6 +65,11 @@
         .divider {
             background-color: #fff
         }
+
+        .scroll-prompt .scroll-prompt-arrow>div {
+            border-right: 8px solid #1a1818;
+            border-bottom: 8px solid #1a1818;
+        }
     </style>
 </head>
 
@@ -72,7 +77,18 @@
     <div class="container">
         <div class="initial-section">
             <div class="brown-rectangle"></div>
-            <h1 class="title">SERIOUS GAME L'ANTI-CASINO <br> 🠛</h1>
+            <h1 class="title">SERIOUS GAME L'ANTI-CASINO <br>
+                <div class="scroll-prompt" scroll-prompt="" ng-show="showPrompt" style="opacity: 1;">
+                    <div class="scroll-prompt-arrow-container">
+                        <div class="scroll-prompt-arrow">
+                            <div></div>
+                        </div>
+                        <div class="scroll-prompt-arrow">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </h1>
         </div>
         <div class="sidebar">
             <div class="sidebar-content"><a href="../work.html">
@@ -106,7 +122,8 @@
             </video></div>
         <p class="image-description">Le premier jeu disponible dans le navigateur sert seulement à se
             <strong>détendre</strong>, c'est un mini-jeu où il faut simplement cliquer sur les cibles. Le résultat final
-            de précision est affiché à la fin.</p>
+            de précision est affiché à la fin.
+        </p>
         <div class="video-container"><video autoplay loop muted playsinline style>
                 <source src="../imgs/nsiImages/nsiBingo2.mp4" type="video/mp4">Votre navigateur ne supporte pas les
                 vidéos HTML5.</source>
@@ -123,7 +140,8 @@
             <strong>"Coinflip"</strong>, ou il y a "une chance sur deux" de gagner le double de sa mise avec un simple
             pile ou face, et il y a un jeu appelé <strong>"Crash"</strong> dans<br>lequel une fusée décolle et s'arrête
             à un multiplicateur "aléatoire". Il faut retirer l'argent avant que la fusée n'explose pour récuperer les
-            gains.</p>
+            gains.
+        </p>
     </div>
     <script src="js/workspages.js"></script>
 </body>

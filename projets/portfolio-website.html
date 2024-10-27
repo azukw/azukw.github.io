@@ -65,6 +65,11 @@
         .divider {
             background-color: #fff
         }
+
+        .scroll-prompt .scroll-prompt-arrow>div {
+            border-right: 8px solid #1a1818;
+            border-bottom: 8px solid #1a1818;
+        }
     </style>
 </head>
 
@@ -72,7 +77,18 @@
     <div class="container">
         <div class="initial-section">
             <div class="brown-rectangle"></div>
-            <h1 class="title">SITE WEB PORTFOLIO<br> 🠛</h1>
+            <h1 class="title">SITE WEB PORTFOLIO<br>
+                <div class="scroll-prompt" scroll-prompt="" ng-show="showPrompt" style="opacity: 1;">
+                    <div class="scroll-prompt-arrow-container">
+                        <div class="scroll-prompt-arrow">
+                            <div></div>
+                        </div>
+                        <div class="scroll-prompt-arrow">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </h1>
         </div>
         <div class="sidebar">
             <div class="sidebar-content"><a href="../work.html">
@@ -105,7 +121,8 @@
             </video></div>
         <p class="image-description">Ce site m'a permis de découvrir les <strong>cartes</strong> ainsi que les
             <strong>sliders</strong>.<br>Une difficulté que j'ai réussi à relever, même avec mon peu de connaissances
-            sur le sujet à ce moment donné !</p>
+            sur le sujet à ce moment donné !
+        </p>
         <div class="video-container"><video autoplay loop muted playsinline style>
                 <source src="../imgs/portfolioImages/portfolio2.mp4" type="video/mp4">Votre navigateur ne supporte pas
                 les vidéos HTML5.</source>

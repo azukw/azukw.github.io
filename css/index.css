@@ -456,10 +456,10 @@ body {
     }
 
     .details{
-        font-size: 3vh;
+        font-size: 2vh;
     }
     .name{
-        font-size: 4vh;
+        font-size: 3vh;
     }
 }
 @media (max-width: 375px) {

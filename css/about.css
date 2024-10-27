@@ -336,6 +336,9 @@ body {
 }
 
 @media (max-height: 900px) {
+    .about-container{
+        padding-bottom: 10vh
+    }
     .main-title{
         font-size: 8vh;
         margin: 0;
@@ -346,7 +349,7 @@ body {
     }
 
     .column p {
-        font-size: 1.5vh;
+        font-size: 1.8vh;
     }
 
     .button {
