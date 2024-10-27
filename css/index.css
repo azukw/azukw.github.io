@@ -423,14 +423,14 @@ body {
     }
 }
 
-@media (max-width: 375px) {
+/* @media (max-width: 375px) {
     
     .navigation {
         padding-top: 10vh;
         font-size: 23vw; 
     }
 }
-
+*/
 @media (max-height: 800px) and (orientation: landscape) {
     
     body {
