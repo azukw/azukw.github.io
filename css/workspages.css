@@ -303,8 +303,12 @@ body {
         text-align: center;
     }
     .sidebar{
-        padding-right: 18vw;
+        padding-right: 15vw;
         right: 15vw;
+    }
+
+    .sidebar a {
+        font-size: 3.5vw;
     }
 
     .divider {

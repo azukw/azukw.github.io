@@ -251,3 +251,10 @@ h1.hello span {
         width: 13vw;
     }
 }
+
+@media (max-height: 800px) and (orientation: landscape) {
+    body {
+        max-width: 100vw;
+        max-height: 100vh;
+    }
+}

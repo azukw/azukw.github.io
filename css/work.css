@@ -287,67 +287,11 @@ body {
     }
 }
 
+
+
 @media (max-width: 1000px) {
     
-
-    * { align-items: center; text-align: center;}
-
-    #title{
-        padding-top: 5vh;
-        font-size: 8vw;
-        padding-left: 8vw;
-    }
-
-    #description {
-        margin-bottom: 17vh;
-        padding-left: 8vw;
-        width: 100vw;
-        height: 1vh;
-        font-size: 2vw;
-    }
-
-    .work-description {
-        width: 100%;
-        padding: 0 20px;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .work-container {
-        flex-direction: column;
-        justify-content: flex-start;
-        padding-top: 20px;
-    }
-
-    .work-projects {
-        width: 100%;
-        padding-top: 15vh ;
-        padding-left: 12vw;
-        overflow-y: auto;
-    }
-
     
-    .hover-image {
-        display: none;
-    }
-
-    .work-description p {
-        font-size: 4vw;
-        line-height: 1.6;
-    }
-
-    .project h1 {
-        font-size: 8vw;
-    }
-
-    .project p {
-        font-size: 3.5vw;
-    }
-}
-
-@media (max-width: 800px) {
-    
-
     * { align-items: center; text-align: center;}
 
     #title{
@@ -380,7 +324,7 @@ body {
     .work-projects {
         margin-top: 2vh;
         width: 100%;
-        padding-left: 8vw;
+        padding-left: 4vw;
         overflow-y: auto;
     }
 
@@ -423,16 +367,19 @@ body {
     .work-projects {
         width:100%;
         padding-top: 10vh;
-        padding-left: 15vw;
+        padding-left: 10vw;
         overflow-y: auto;
     }
 
     .sidebar {
-        width: 12vw;
+        padding-left: 5vw;
+        width: 7vw;
     }
 }
 
-@media (max-height: 500px) and (orientation: landscape) {
+
+
+/* @media (max-height: 500px) and (orientation: landscape) {
     #title{
         padding-top: 50vh;
         font-size: 6vw;
@@ -467,4 +414,4 @@ body {
     }
 
     
-}
+} */
