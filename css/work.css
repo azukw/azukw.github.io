@@ -53,11 +53,11 @@ body {
 .sidebar a::before {
     content: '';
     position: absolute;
-    width: 0%; 
+    width: 0%;
     height: 0.2vh;
     background-color: #ffffff;
-    top: 65vh;
-    left: 50vw;
+    top: 65%;
+    left: 50%;
     transform: translate(-50%, -50%) rotate(90deg);
     transition: width 0.3s ease-in-out;
 }
@@ -80,13 +80,13 @@ body {
 .vertical-text {
     transform: rotate(-90deg);
     text-transform: uppercase;
-    letter-spacing: 0.25vw;
+    letter-spacing: 0.3vw;
 }
 
 .divider {
-    width: 0.05vw;
+    width: 0.1vw;
     height: 20vh;
-    background-color: #f8f1eb;
+    background-color: #fff;
     border: none;
     margin: 20vh 0;
 }
