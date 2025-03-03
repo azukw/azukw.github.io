@@ -1,61 +1,86 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sami SAOUD</title>
-    <link rel="icon" type="image/png" href="imgs/favicon.png">
-    <link rel="stylesheet" href="https://use.typekit.net/zda3gdw.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/load.css">
+    <script defer src="./js/script.js"></script>
+    <script defer src="./js/load.js"></script>
 </head>
 
 <body>
-    <div class="container" id="main-content">
-        <div class="sidebar">
-            <div class="sidebar-content">
-                <p class="vertical-text">BIENVENUE</p>
-                <hr class="divider">
-                <p class="vertical-text">© 2025</p>
-            </div>
-        </div>
-        <section class="controls">
-            <div class="key-row">
-                <div class="key">↑</div>
-            </div>
-            <div class="key-row">
-                <div class="key">←</div>
-                <div class="key">↓</div>
-                <div class="key">→</div>
-            </div>
-            <div class="key-row">
-                <div class="key space">Espace</div>
-            </div>
-        </section>
-        <nav class="navigation"><a href="work.html" class="responsive-text"><span class="first-part">PRO</span><span
-                    class="second-part">JETS</span></a> <a href="about.html" id="littlenav">MOI</a> <a
-                href="contact.html" class="responsive-text"><span class="first-part">CONT</span><span
-                    class="second-part">ACT</span></a></nav>
-        <section class="info">
-            <p class="name">SAMI SAOUD</p>
-            <p class="details">Actuellement étudiant en<br>Informatique à <a href="https://www.univ-rennes.fr"
-                    target="_blank">l'Université de Rennes</a></p>
-        </section>
-        <div class="character" id="character"></div>
-        <div class="platform" id="top-platform"></div>
-        <div class="platform" id="bottom-platform"></div>
-        <div class="platform" id="left-platform"></div>
-        <div class="platform" id="right-platform"></div>
-        <div class="platform" id="first-platform"></div>
-        <div class="platform" id="second-platform"></div>
-        <div class="platform" id="third-platform"></div>
-        <div class="platform" id="fourth-platform"></div>
-        <div class="platform" id="projets-platform"></div>
-        <div class="platform" id="moi-platform"></div>
-        <div class="platform" id="contact-platform"></div>
-        <div class="platform" id="info-platform"></div>
-    </div>
-    <script src="js/index.js"></script>
-</body>
+    <div class="wrap bg-noise">
+    <div class="pixelBackground"></div>
 
+    <header>
+        <div class="sep"></div>
+        <nav>
+            <ul>
+                <li class="active"><a href="#">001/ACCUEIL</a></li>
+                <li><a href="projets.html">002/PROJETS</a></li>
+                <li><a href="about.html">003/ABOUT</a></li>
+            </ul>
+        </nav>
+        <div class="sep"></div>
+    </header>
+
+    <main>
+        <section class="content">
+            <div class="text-block left">
+                <p>Depuis mon enfance, les jeux vidéo et l’informatique ont toujours été au cœur de mes passions.</p>
+                <p>Très vite, j’ai voulu comprendre comment ils fonctionnaient, comment un simple concept pouvait devenir une expérience interactive.                </p>
+                <p>Aujourd’hui, je crée mes propres projets, explorant de nouvelles idées, testant des mécaniques et cherchant à offrir des expériences uniques.
+
+                </p>
+            </div>
+
+            <div class="text-block left hidden">
+                <p>Depuis mon enfance, les jeux vidéo et l’informatique ont toujours été au cœur de mes passions.</p>
+            </div>
+            
+            <div class="image-container">
+                <img src="assets/FACE.png" alt="Image">
+            </div>
+    
+            <div class="side-text left-text">JEUX VIDEOS</div>
+            <div class="side-text right-text">INFORMATIQUE</div>
+
+
+            <div class="text-block right">
+                <p>Que ce soit avec Godot, Unity ou Unreal Engine, je développe des prototypes, teste des idées et expérimente des mécaniques de jeu.</p>
+                <p>En parallèle, j’ai acquis des compétences en programmation (Java, C, POO) et en développement web (React, NodeJS, JavaScript), me permettant de structurer mes projets avec rigueur et efficacité.                </p>
+                <p>Mon approche ? Allier technique et créativité pour donner vie à des mondes interactifs.                </p>
+            </div>
+
+            <div class="text-block right hidden">
+                <p>Aujourd’hui, je crée mes propres projets, explorant de nouvelles idées, testant des mécaniques et cherchant à offrir des expériences uniques.</p>
+            </div>
+        </section>
+    
+        <!-- PETITS TEXTES EN LIGNE SOUS L'IMAGE -->
+        <section class="small-texts">
+            <span></span>
+            <span>ORGANISÉ</span>
+            <span>ESPRIT D'ÉQUIPE</span>
+            <span>CRÉATIF</span>
+            <span>CURIEUX</span>
+        </section>
+
+
+        <p class="mobile-only-text">Étudiant à l'Université de Rennes en Licence 3 Informatique, je cherche un stage de 6 semaines minimum à partir du 5 mai !</p>
+
+        <section class="bottom-section">
+            <div class="title"><a href="about.html">SAMI SAOUD</a></div>
+        </section>
+    </main>
+    
+    <div class="section-titleF">
+        <h1>ACCUEIL</h1>
+    </div>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+</body>
 </html>

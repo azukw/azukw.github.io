@@ -1,43 +1,103 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sami SAOUD</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300&display=swap"
-        rel="stylesheet">
-    <link rel="icon" type="image/png" href="imgs/favicon.png">
-    <link rel="stylesheet" href="https://use.typekit.net/zda3gdw.css">
-    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="./styles/about.css">
+    <link rel="stylesheet" href="./styles/load.css">
+    <script defer src="./js/script.js"></script>
+    <script defer src="./js/load.js"></script>
 </head>
-
 <body>
-    <div class="about-container" id="about-section">
-        <div class="sidebar">
-            <div class="sidebar-content"><a href="index.html">
-                    <p class="vertical-text">ACCUEIL</p>
-                </a>
-                <hr class="divider">
-                <p class="vertical-text">© 2024</p>
-            </div>
-        </div>
-        <h1 class="main-title">Et moi ?</h1>
-        <div class="bottom-section">
-            <div class="column left">
-                <h2>Ma passion</h2>
-                <p>Je suis un passioné du jeu vidéo depuis ma tendre enfance, et de l'informatique en général. Je crée
-                    mes propres jeux pendant mon temps libre, que ce soit sur Godot, Unity ou encore Unreal Engine.</p>
-            </div>
-            <div class="column right">
-                <h2>Mes capacités</h2>
-                <p>J'ai des compétences diverses en Python, HTML, CSS, Javascript, Java, et des bases en C.</p>
-            </div>
-        </div>
-        <div class="button-container"><a href="imgs/cv_sami.pdf" class="button" target="_blank">Mon CV</a></div>
-    </div>
-    <script src="js/about.js"></script>
-</body>
+    <div class="wrap bg-noise">
 
+    <div class="pixelBackground"></div>
+
+    <header>
+        <div class="sep"></div>        <nav>
+            <ul>
+                <li><a href="index.html">001/ACCUEIL</a></li>
+                <li><a href="projets.html">002/PROJETS</a></li>
+                <li class="active"><a href="#">003/ABOUT</a></li>
+            </ul>
+        </nav>
+        <div class="sep"></div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="text">
+                    <p>Développer un jeu, c’est bien plus que
+                         <strong class="highlight">coder</strong>. C’est créer un
+                         <strong class="highlight">équilibre</strong>, entre gameplay, narration et immersion, c’est
+                         <strong class="highlight">comprendre</strong> comment un joueur va interagir avec 
+                         un monde que l’on a façonné. Depuis plusieurs années, j’expérimente et j’apprends, 
+                         <strong class="highlight">construisant</strong> peu à peu mon approche du développement de jeux vidéo.
+                </div>
+                <div class="image">
+                    <img src="./assets/controller.png" alt="Image abstraite">
+                </div>
+            </div>
+    
+            <div class="row inverse">
+                <div class="image">
+                    <img src="./assets/books.png" alt="Image abstraite">
+                </div>
+                <div class="text">
+                    <p>Grâce à mes études et à mes projets personnels, j’ai acquis des
+                         <strong class="highlight">compétences</strong> en programmation (Java, C, POO) 
+                         et en développement web (HTML, CSS, JavaScript, React, NodeJS).
+                         Que ce soit pour concevoir une
+                         <strong class="highlight">interface</strong>, structurer un projet ou optimiser un gameplay,
+                         j’aime trouver des solutions efficaces et adaptées.
+                         Mon objectif ? Créer des expériences  
+                         <strong class="highlight">interactives</strong>qui marquent les esprits.
+                        </p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="marquee">
+            <div class="marquee-inner">
+                <span>VOUS AIMEZ MON TRAVAIL ? ÉCHANGONS !&nbsp;</span>
+                <span>INTÉRESSÉ PAR MES PROJETS ? DISCUTONS ! &nbsp;</span>
+                <span>BESOIN D’UN DÉVELOPPEUR PASSIONNÉ ? CONTACTEZ-MOI ! &nbsp;</span>
+                <span>VOUS AIMEZ MON TRAVAIL ? ÉCHANGONS !&nbsp;</span>
+                <span>INTÉRESSÉ PAR MES PROJETS ? DISCUTONS ! &nbsp;</span>
+                <span>BESOIN D’UN DÉVELOPPEUR PASSIONNÉ ? CONTACTEZ-MOI ! &nbsp;</span>
+                <span>VOUS AIMEZ MON TRAVAIL ? ÉCHANGONS !&nbsp;</span>
+                <span>INTÉRESSÉ PAR MES PROJETS ? DISCUTONS ! &nbsp;</span>
+                <span>BESOIN D’UN DÉVELOPPEUR PASSIONNÉ ? CONTACTEZ-MOI ! &nbsp;</span>
+            </div>
+        </div>
+    
+        <div class="section-titleF">
+            <h1>ABOUT</h1>
+        </div>
+    
+        <div class="buttons">
+            <button> <a href="https://www.linkedin.com/in/sami-saoud-446836340/" target="_blank">LINKEDIN</a></button>
+            <p> ━━━━━ </p>
+            <button><a href="assets/cv_sami.pdf" target="_blank">MON CV</a></button>
+            <p> ━━━━━ </p>
+            <button><a href="mailto:sami.ssaoud@gmail.com" target="_blank">CONTACTEZ-MOI</a></button>
+            <p> ━━━━━ </p>
+            <button><a href="https://github.com/azukw" target="_blank">GITHUB</a></button>
+        </div>
+
+        <div class="buttons2">
+            <button><a href="https://www.linkedin.com/in/sami-saoud-446836340/" target="_blank">LINKEDIN</a></button>
+            <button><a href="assets/cv_sami.pdf" target="_blank">MON CV</a></button>
+        </div>
+        <div class="buttons2">
+            <button><a href="mailto:sami.ssaoud@gmail.com" target="_blank">CONTACTEZ-MOI</a></button>
+            <button><a href="https://github.com/azukw" target="_blank">GITHUB</a></button>
+        </div>
+    </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+</body>
 </html>

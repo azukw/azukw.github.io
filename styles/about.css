@@ -1,0 +1,519 @@
+@font-face {
+  font-family: "PPNeueBit";
+  src: url(/fonts/PPNeueBit-Bold.otf) format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pixter";
+  src: url(/fonts/pixter-granular.ttf) format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url(/fonts/BarlowSemiCondensed-SemiBold.ttf) format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+.wrap {
+  height: 100vh;
+  width: 100vw;
+}
+
+.bg-noise {
+  background: url("https://i.ibb.co/FgcVfGG/bg-noise-1.png"), #000000e7;
+  background-size: 300px 300px;
+  animation: 250ms steps(10, end) 0s infinite alternate-reverse none running noise-animation;
+  
+}
+
+@keyframes noise-animation {
+  0% { background-position: 0% 0%; }
+  10% { background-position: -5% -5%; }
+  20% { background-position: -10% 5%; }
+  30% { background-position: 5% -10%; }
+  40% { background-position: -5% 15%; }
+  50% { background-position: -10% 5%; }
+  60% { background-position: 5% 5%; }
+  70% { background-position: 0% 10%; }
+  80% { background-position: -5% -5%; }
+  90% { background-position: 10% 5%; }
+}
+
+body {
+  overflow: hidden;
+  background-color: #0d0d0d;
+  color: #757575;
+  font-family: "Pixter", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 4%;
+  margin-bottom: -4%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #555;
+  border-radius: 25px;
+  padding: 10px 20px;
+}
+
+nav ul li {
+  margin: 0 10px;
+  font-size: 12px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #777;
+  transition: color 0.3s;
+}
+
+nav ul li.active a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+nav ul li a:hover {
+  color: #ddd;
+}
+
+main {
+  padding: 50px;
+}
+
+.container {
+  width: 80vw;
+  margin: 3vw auto;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4vh;
+  gap: 20vw;
+}
+
+.row .text {
+  font-family: "PPNeueBit", sans-serif;
+  width: 35vw;
+  text-align: left;
+  font-size: 1.2vw;
+  line-height: 1.5;
+}
+
+.row .image {
+  width: 15%;
+}
+
+.row .image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.inverse .image {
+  padding-left: 10vw;
+}
+.inverse {
+  gap: 20vw;
+}
+
+/* Texte en gras souligné */
+.highlight {
+  color: aliceblue;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Marquee container */
+.marquee {
+  right: 10vw;
+  width: 2000vw;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Infinite scrolling effect */
+.marquee-inner {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+
+/* Text styling */
+.marquee-inner span {
+  font-family: "PPNeueBit", sans-serif;
+  font-size: 800%;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* True infinite animation */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.section-titleF {
+  z-index: 9999;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: "Pixter", sans-serif;
+  text-transform: uppercase;
+  position: absolute;
+  top: -5%;
+  animation: fadeOut 3s forwards;
+}
+
+.section-titleF h1 {
+  font-size: 16vw;
+  font-weight: bold;
+  color: #fff;
+  opacity: 100%;
+  padding-right: 5vh;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 1%;
+  }
+}
+
+/* Boutons arrondis */
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+}
+
+.buttons2 {
+  display: none;
+}
+
+button {
+  font-family: "Barlow", sans-serif;
+  background-color: transparent;
+  margin: 1%;
+  cursor: pointer;
+  background: none;
+  border: 1px solid #555;
+  border-radius: 25px;
+  padding: 0.5% 1%;
+  font-size: 100%;
+  color: #777;
+  text-decoration: none;
+  transition: color 0.3s, background 0.3s;
+}
+
+button a {
+  text-decoration: none;
+  color: #777;
+}
+
+button:hover {
+  background-color: #cccccc;
+  color: black;
+}
+
+button:hover-out {
+  background-color: transparent;
+  color: #fff;
+}
+
+@media (max-width: 1800px) and (orientation: landscape) {
+  nav {
+    margin-bottom: 10vh;
+  }
+
+  .container {
+    margin-bottom: -4vh;
+    margin-top: -5vh;
+  }
+
+  .row .image {
+    width: 20vh;
+  }
+
+  .row .text {
+    font-size: 2.6vh;
+  }
+
+  .marquee {
+    margin-top: 7vh;
+    font-size: 1.9vh;
+  }
+
+  .section-titleF h1 {
+    font-size: 32vh;
+  }
+}
+
+@media (max-width: 1450px) and (orientation: landscape) {
+  nav {
+    margin-bottom: 12vh;
+  }
+
+  .container {
+    margin-bottom: 4vw;
+    margin-top: -5vh;
+  }
+
+  .row .text {
+    width: 40vw;
+    font-size: 2.3vh;
+  }
+
+  .marquee {
+    margin-top: 7vh;
+  }
+}
+
+@media (max-width: 1100px) and (orientation: landscape) {
+  nav {
+    margin-bottom: 10vh;
+  }
+
+  .container {
+    margin-bottom: 4vw;
+    margin-top: -5vh;
+  }
+
+  .row .text {
+    width: 40vw;
+    font-size: 2vh;
+  }
+
+  .marquee {
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    font-size: clamp(1.5vh, 1.5vh, 3vh);
+  }
+
+  .buttons {
+    font-size: 1.8vh;
+  }
+
+  .section-titleF h1 {
+    padding-right: 5vw;
+    font-size: 25vw;
+  }
+}
+
+@media (max-width: 1000px) and (orientation: portrait) {
+  nav {
+    padding-top: 1vh;
+    padding-bottom: 5vh;
+  }
+
+  .container {
+    margin-top: -5vh;
+  }
+
+  .row .text {
+    width: 50vw;
+    font-size: clamp(1.5vh, 2vh, 3vh);
+  }
+
+  .inverse .text {
+    width: 60vw;
+  }
+
+  .row .image {
+    width: 20vw;
+  }
+
+  .inverse .image {
+    width: 20vw;
+  }
+
+  .image {
+    margin: -10vw;
+  }
+
+  .marquee {
+    margin-top: 5vh;
+    font-size: 2vw;
+    margin-bottom: 3vw;
+  }
+
+  .buttons {
+    padding-top: 3vh;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+  }
+
+  .buttons p {
+    font-size: 1vh;
+  }
+
+  .buttons button {
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 1.5vh; /* <- Change cette ligne */
+    padding-bottom: 1.5vh; /* <- Change cette ligne */
+    font-size: 1.5vw;
+  }
+
+  .section-titleF h1 {
+    display: none;
+  }
+}
+
+@media (max-width: 912px) and (orientation: landscape) {
+  nav {
+    margin-bottom: -5vh;
+    font-size: 0.8vw;
+  }
+
+  nav ul li {
+    margin: -0.5vw 3vw;
+    font-size: 1vw;
+  }
+
+  .row .text {
+    margin-top: 4vh;
+    width: 40vw;
+    font-size: clamp(1.3vw, 2.2vh, 3vw);
+  }
+
+  .row .image {
+    margin-top: 3vh;
+  }
+
+  .inverse .text {
+    margin-top: 0vh;
+    font-size: clamp(1.2vw, 2.2vh, 3vw);
+    width: 40vw;
+  }
+
+  .image {
+    width: 30vw;
+  }
+
+  .marquee {
+    margin-top: 2vh;
+    font-size: 0.5vw;
+  }
+
+  .buttons {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1px !important; /* Réduit l’espace entre les boutons */
+    flex-wrap: wrap !important; /* Permet de les mettre sur plusieurs lignes si nécessaire */
+  }
+
+  .buttons button {
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    padding-top: 2vh; /* <- Change cette ligne */
+    padding-bottom: 2vh; /* <- Change cette ligne */
+    font-size: 1vw;
+  }
+
+  .section-titleF h1 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) and (orientation: portrait) {
+  nav {
+    padding-top: 3vh;
+    margin-bottom: -10vw;
+  }
+  nav ul li {
+    margin: -0.8vw 5px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .row .text {
+    text-align: center;
+    margin-bottom: 5vh;
+    padding-right: 5vh;
+    width: 75vw;
+    font-size: clamp(1.5vh, 2.5vh, 3vh);
+  }
+
+  .row .image {
+    padding-right: 10vw;
+    width: 30vw; /* Ajuste la taille de l’image */
+    max-width: 300px; /* Empêche que l’image soit trop grande */
+    margin-top: -25vw; 
+  }
+
+  /* Ajustement de l’image de la rangée inverse */
+  .inverse {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .buttons p {
+    display: none;
+  }
+
+  .buttons button {
+    display: none;
+  }
+
+  .buttons2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    padding-top: -20vh;
+  }
+
+  .buttons2 button {
+    width: 45%;
+    padding: 10px;
+    font-size: 1.6vh;
+    text-align: center;
+  }
+
+  .marquee {
+    margin-top: 8vh;
+    font-size: 1vh;
+  }
+}
