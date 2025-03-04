@@ -115,11 +115,11 @@ height: 100vh;
 .img img {
   transition: filter 0.3s ease;
   width: 100%;
-  filter: blur(5px) brightness(0.5); /* Flou et assombrissement au hover */
+  filter: blur(5px) brightness(0.5);
 }
 
 .img:hover img {
-filter: blur(5px) brightness(0.7); /* Flou et assombrissement au hover */
+filter: blur(5px) brightness(0.7);
 }
 
 .project-info {
@@ -132,7 +132,7 @@ color: white;
 text-align: center;
 transition: transform 0.3s ease;
 font-family: "PPNeueBit", sans-serif;
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added shadow to text */
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -232,7 +232,7 @@ color: #777;
 
 
 
-/* Responsive adjustments */
+
 @media (max-width: 1800px) and (orientation: landscape) {
 .project-info {
   position: absolute;
@@ -258,7 +258,7 @@ section {
 
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 1400px) and (orientation: landscape) {
 section {
   cursor: grab;

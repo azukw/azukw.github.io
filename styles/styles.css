@@ -23,7 +23,7 @@ nav {
 
 .bg-noise {
     background: url("https://i.ibb.co/FgcVfGG/bg-noise-1.png"), #080808f8;
-    background-size: 500px 500px;
+    background-size: 300px 300px;
     animation: 250ms steps(10, end) 0s infinite alternate-reverse none running noise-animation;
     
   }
@@ -102,7 +102,7 @@ main {
 .hidden {
     display: none;
 }
-/* SECTION CONTENANT L'IMAGE ET LE TEXTE */
+
 .content {
     display: flex;
     justify-content: center;
@@ -113,7 +113,7 @@ main {
     margin-bottom: 5vh;
 }
 
-/* BLOCS DE TEXTE PLUS HAUTS */
+
 .text-block {
     padding-top: 3vh;
     width: 22vw;
@@ -121,7 +121,7 @@ main {
     line-height: 1.5;
 }
 
-/* IMAGE PLUS PETITE */
+
 .image-container {
     width: 22vw;
 }
@@ -131,7 +131,7 @@ main {
     border-radius: 5px;
 }
 
-/* PETITS TEXTES EN LIGNE */
+
 .small-texts {
     display: flex;
     justify-content: center;
@@ -144,7 +144,7 @@ main {
     opacity: 0.7;
 }
 
-/* SECTION DU BAS (SAMI + FLECHE + NUMERO) */
+
 .bottom-section {
     display: flex;
     align-items: center;
@@ -157,7 +157,7 @@ main {
     text-decoration: none;
 }
 
-/* "SAMI" AU CENTRE */
+
 .title {
     font-family: "PPNeueBit", sans-serif;
     font-size: 16vw;
@@ -245,7 +245,7 @@ main {
 
 
 
-/* Responsive adjustments */
+
 @media (max-width: 1800px) and (max-height: 900px) and (orientation: landscape) {
 
     nav {
@@ -315,7 +315,7 @@ main {
     }
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 1400px) and (orientation: landscape) {
     nav {
         margin-bottom: 5vh;

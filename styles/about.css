@@ -135,28 +135,28 @@ main {
   gap: 20vw;
 }
 
-/* Texte en gras souligné */
 .highlight {
   color: aliceblue;
   font-weight: bold;
   text-decoration: underline;
 }
 
-.marquee {
+.contactez {
   margin-top: -4vh;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
-/* Text styling */
-.marquee-inner span {
+.contactez-inner span {
   font-family: "PPNeueBit", sans-serif;
   font-size: 1000%;
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
+  white-space: nowrap;
 }
 
 .section-titleF {
@@ -190,7 +190,6 @@ main {
   }
 }
 
-/* Boutons arrondis */
 .buttons {
   display: flex;
   justify-content: center;
@@ -253,7 +252,7 @@ button:hover-out {
     font-size: 2.6vh;
   }
 
-  .marquee {
+  .contactez {
     margin-top: 7vh;
     font-size: 1.5vh;
   }
@@ -278,7 +277,7 @@ button:hover-out {
     font-size: 2.3vh;
   }
 
-  .marquee {
+  .contactez {
     margin-top: 7vh;
   }
 }
@@ -298,7 +297,7 @@ button:hover-out {
     font-size: 2.2vh;
   }
 
-  .marquee {
+  .contactez {
     margin-top: -2vh;
     margin-bottom: 4vh;
     font-size: clamp(1.active, 1vh, 3vh);
@@ -345,7 +344,7 @@ button:hover-out {
     margin: -10vw;
   }
 
-  .marquee {
+  .contactez {
     margin-top: 5vh;
     font-size: 1.5vw;
     margin-bottom: 3vw;
@@ -366,8 +365,8 @@ button:hover-out {
   .buttons button {
     padding-left: 2vw;
     padding-right: 2vw;
-    padding-top: 1.5vh; /* <- Change cette ligne */
-    padding-bottom: 1.5vh; /* <- Change cette ligne */
+    padding-top: 1.5vh; 
+    padding-bottom: 1.5vh; 
     font-size: 1.5vw;
   }
 
@@ -407,7 +406,7 @@ button:hover-out {
     width: 30vw;
   }
 
-  .marquee {
+  .contactez {
     margin-top: -8vh;
     font-size: 0.7vw;
   }
@@ -416,15 +415,15 @@ button:hover-out {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    gap: 1px !important; /* Réduit l’espace entre les boutons */
-    flex-wrap: wrap !important; /* Permet de les mettre sur plusieurs lignes si nécessaire */
+    gap: 1px !important; 
+    flex-wrap: wrap !important; 
   }
 
   .buttons button {
     padding-left: 1.5vw;
     padding-right: 1.5vw;
-    padding-top: 2vh; /* <- Change cette ligne */
-    padding-bottom: 2vh; /* <- Change cette ligne */
+    padding-top: 2vh;
+    padding-bottom: 2vh;
     font-size: 1vw;
   }
 
@@ -468,13 +467,13 @@ button:hover-out {
 
   .row .image {
     padding-right: 7vw;
-    width: 30vw; /* Ajuste la taille de l’image */
-    max-width: 300px; /* Empêche que l’image soit trop grande */
+    width: 30vw;
+    max-width: 300px;
     margin-top: -30vw; 
     margin-bottom: -10vh;
   }
 
-  /* Ajustement de l’image de la rangée inverse */
+ 
   .inverse {
     display: none;
     flex-direction: column;
@@ -505,8 +504,12 @@ button:hover-out {
     text-align: center;
   }
 
-  .marquee {
-    margin-top: 8vh;
-    font-size: 1.2vw;
+  .contactez {
+    font-size: 0.9vh;
+    width: 100%;
+  }
+
+  .contactez-inner span {
+    font-size: 15vw;
   }
 }

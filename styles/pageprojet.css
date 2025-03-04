@@ -110,8 +110,8 @@ nav ul li a:hover {
 }
 
 section {
-  width: 420vw; /* Ajuste la largeur pour ne pas trop dépasser */
-  max-width: 1000vw; /* Assure que ça reste dans l'écran */
+  width: 420vw;
+  max-width: 1000vw;
   cursor: grab;
   width: 300vw;
   height: 100%;
@@ -261,7 +261,7 @@ section {
   text-align: center;
   opacity: 1;
   font-family: "PPNeueBit", sans-serif;
-  pointer-events: none; /* Ensures hover works correctly */
+  pointer-events: none;
   z-index: 100000;
 }
 
@@ -325,7 +325,7 @@ section {
 }
 
 
-/* Responsive adjustments */
+
 @media (max-width: 1800px) and (orientation: landscape) {
   .project-info {
     line-height: 6vh;
@@ -491,7 +491,7 @@ section {
       2rem,
       3.5vw,
       5rem
-    ); /* Adjusts between 2rem and 5rem based on screen size */
+    );
     width: 20vw;
     right: -5.5vw;
     top: 35vh;
