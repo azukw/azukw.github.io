@@ -68,31 +68,32 @@ nav ul {
     display: flex;
     padding: 0;
     margin: 0;
-    border: 1px solid #555;
-    border-radius: 20vw;
-    padding: 1vh 1.8vw;
-}
-
-nav ul li {
+    border: 1px solid #c9c9c9;
+    border-radius: 25px;
+    padding: 10px 20px;
+  }
+  
+  nav ul li {
     margin: 0 10px;
     font-size: 12px;
-}
-
-nav ul li a {
+  }
+  
+  nav ul li a {
     text-decoration: none;
-    color: #777;
+    color: #c9c9c9;
     transition: color 0.3s;
-}
-
-nav ul li.active a {
+  }
+  
+  nav ul li.active a {
     color: #fff;
     font-weight: bold;
     text-decoration: underline;
-}
-
-nav ul li a:hover {
+  }
+  
+  nav ul li a:hover {
     color: #ddd;
-}
+  }
+  
 
 main {
     padding: 7vh;

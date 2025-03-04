@@ -47,7 +47,6 @@
 body {
   overflow: hidden;
   background-color: #0d0d0d;
-  color: #757575;
   font-family: "Pixter", sans-serif;
   margin: 0;
   padding: 0;
@@ -68,7 +67,7 @@ nav ul {
   display: flex;
   padding: 0;
   margin: 0;
-  border: 1px solid #555;
+  border: 1px solid #c9c9c9;
   border-radius: 25px;
   padding: 10px 20px;
 }
@@ -80,7 +79,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #777;
+  color: #c9c9c9;
   transition: color 0.3s;
 }
 
@@ -111,6 +110,7 @@ main {
 }
 
 .row .text {
+  color: #cecece;
   font-family: "PPNeueBit", sans-serif;
   width: 35vw;
   text-align: left;
@@ -143,35 +143,20 @@ main {
 }
 
 .marquee {
-  width: 100vw; /* Empêche le débordement */
+  margin-top: -4vh;
   overflow: hidden;
-  margin-left: -6vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.marquee-inner {
-  display: inline-block;
-  animation: marquee 40s linear infinite;
-  white-space: nowrap;
-}
-
 
 /* Text styling */
 .marquee-inner span {
   font-family: "PPNeueBit", sans-serif;
-  font-size: 800%;
+  font-size: 1000%;
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
-}
-
-/* True infinite animation */
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
 }
 
 .section-titleF {
@@ -222,7 +207,7 @@ button {
   margin: 1%;
   cursor: pointer;
   background: none;
-  border: 1px solid #555;
+  border: 1px solid #f3f3f3;
   border-radius: 25px;
   padding: 0.5% 1%;
   font-size: 100%;
@@ -233,17 +218,21 @@ button {
 
 button a {
   text-decoration: none;
-  color: #777;
+  color: #f3f3f3;
 }
 
 button:hover {
-  background-color: #cccccc;
+  background-color: #f3f3f3;
   color: black;
 }
 
 button:hover-out {
   background-color: transparent;
-  color: #fff;
+  color: #f3f3f3;
+}
+
+.buttons p {
+  color: #f3f3f3;
 }
 
 @media (max-width: 1800px) and (orientation: landscape) {
@@ -266,7 +255,7 @@ button:hover-out {
 
   .marquee {
     margin-top: 7vh;
-    font-size: 1.9vh;
+    font-size: 1.5vh;
   }
 
   .section-titleF h1 {
@@ -310,9 +299,9 @@ button:hover-out {
   }
 
   .marquee {
-    margin-top: 4vh;
+    margin-top: -2vh;
     margin-bottom: 4vh;
-    font-size: clamp(1.5vh, 1.5vh, 3vh);
+    font-size: clamp(1.active, 1vh, 3vh);
   }
 
   .buttons {
@@ -358,7 +347,7 @@ button:hover-out {
 
   .marquee {
     margin-top: 5vh;
-    font-size: 2vw;
+    font-size: 1.5vw;
     margin-bottom: 3vw;
   }
 
@@ -419,8 +408,8 @@ button:hover-out {
   }
 
   .marquee {
-    margin-top: 2vh;
-    font-size: 0.5vw;
+    margin-top: -8vh;
+    font-size: 0.7vw;
   }
 
   .buttons {
@@ -445,9 +434,10 @@ button:hover-out {
 }
 
 @media (max-width: 480px) and (orientation: portrait) {
+
   nav {
     padding-top: 3vh;
-    margin-bottom: -10vw;
+    margin-bottom: -5vw;
   }
 
   nav ul li {
@@ -517,6 +507,6 @@ button:hover-out {
 
   .marquee {
     margin-top: 8vh;
-    font-size: 1vh;
+    font-size: 1.2vw;
   }
 }
