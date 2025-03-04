@@ -25,7 +25,7 @@
 }
 
 .bg-noise {
-  background: url("https://i.ibb.co/FgcVfGG/bg-noise-1.png"), #000000e7;
+  background: url("https://i.ibb.co/FgcVfGG/bg-noise-1.png"), #080808f8;
   background-size: 300px 300px;
   animation: 250ms steps(10, end) 0s infinite alternate-reverse none running noise-animation;
   
@@ -142,20 +142,18 @@ main {
   text-decoration: underline;
 }
 
-/* Marquee container */
 .marquee {
-  right: 10vw;
-  width: 2000vw;
+  width: 100vw; /* Empêche le débordement */
   overflow: hidden;
-  position: relative;
+  margin-left: -6vh;
 }
 
-/* Infinite scrolling effect */
 .marquee-inner {
-  display: flex;
-  width: max-content;
+  display: inline-block;
   animation: marquee 40s linear infinite;
+  white-space: nowrap;
 }
+
 
 /* Text styling */
 .marquee-inner span {
