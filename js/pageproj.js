@@ -86,11 +86,49 @@ window.onload = function () {
 
     // Recalculer les valeurs lors du redimensionnement de la fenêtre
     window.addEventListener("resize", recalculateValues);
+
+    // Drag avec le tactile
+    container.addEventListener("touchstart", (e) => {
+        e.preventDefault();
+        isDown = true;
+        isDragging = false;
+        startX = e.touches[0].pageX;
+        scrollLeft = gsap.getProperty(scroller, "x");
+    });
+
+    container.addEventListener("touchend", () => {
+        isDown = false;
+        setTimeout(() => isDragging = false, 50);
+    });
+
+    container.addEventListener("touchmove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        isDragging = true;
+
+        const moveX = e.touches[0].pageX - startX;
+        let newX = Math.max(0, Math.min(scrollLeft - moveX, maxDragX));
+
+        gsap.to(scroller, { x: newX, duration: 0.5, ease: "power3.out" });
+        updateContainerPosition(newX);
+    });
 };
 
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".img").forEach(img => {
         img.addEventListener("mouseenter", function () {
+            const title = img.getAttribute("data-title");
+            const number = img.getAttribute("data-number");
+            const tech = img.getAttribute("data-tech");
+            const year = img.getAttribute("data-year");
+
+            img.querySelector(".project-number").textContent = `// ${number}`;
+            img.querySelector(".project-title").textContent = title;
+            img.querySelector(".project-tech").textContent = `${tech} - ${year}`;
+        });
+
+        // Ajouter un événement pour les appareils tactiles
+        img.addEventListener("touchstart", function () {
             const title = img.getAttribute("data-title");
             const number = img.getAttribute("data-number");
             const tech = img.getAttribute("data-tech");
