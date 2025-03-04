@@ -469,8 +469,8 @@ button:hover-out {
     padding-right: 7vw;
     width: 30vw;
     max-width: 300px;
-    margin-top: -30vw; 
-    margin-bottom: -10vh;
+    margin-top: -20vw; 
+    margin-bottom: 0vh;
   }
 
  
@@ -494,7 +494,7 @@ button:hover-out {
     justify-content: center;
     align-items: center;
     gap: 1px;
-    padding-top: -20vh;
+    padding-top: 0vh;
   }
 
   .buttons2 button {
@@ -505,11 +505,6 @@ button:hover-out {
   }
 
   .contactez {
-    font-size: 0.9vh;
-    width: 100%;
-  }
-
-  .contactez-inner span {
-    font-size: 15vw;
+    display: none;
   }
 }
