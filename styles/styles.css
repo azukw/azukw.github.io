@@ -22,7 +22,7 @@ nav {
 }
 
 .bg-noise {
-    background: url("https://i.ibb.co/FgcVfGG/bg-noise-1.png"), #000000f8;
+    background: url("https://i.ibb.co/FgcVfGG/bg-noise-1.png"), #080808f8;
     background-size: 500px 500px;
     animation: 250ms steps(10, end) 0s infinite alternate-reverse none running noise-animation;
     
@@ -41,6 +41,7 @@ nav {
     90% { background-position: 10% 5%; }
   }
 
+
 body {
     width: 100vw;
     height: 100vh;
@@ -50,6 +51,8 @@ body {
     font-family: "Pixter", sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 header {
@@ -238,6 +241,7 @@ main {
     margin-left: auto;
     margin-right: auto;
 }
+
 
 
 /* Responsive adjustments */
@@ -524,10 +528,6 @@ main {
 
 @media (max-width: 480px) and (orientation: portrait) {
 
-    nav {
-        margin-bottom: 3vh;
-    }
-
     .mobile-only-text {
         width: 70vw;
         font-size: clamp(1.5vh, 2vh, 3vh);
@@ -546,12 +546,12 @@ main {
     .left-text {
         font-size: clamp(1.5vh, 2vh, 3vh);
         left: 8vw;
-        top: 10vh;
+        top: 1vh;
     }
 
     .right-text {
         font-size: clamp(1.5vh, 2vh, 3vh);
-        top: 34vh;
+        top: 25vh;
         right: 8vw;
     }
 

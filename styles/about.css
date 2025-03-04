@@ -51,6 +51,8 @@ body {
   font-family: "Pixter", sans-serif;
   margin: 0;
   padding: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
 header {
@@ -306,7 +308,7 @@ button:hover-out {
 
   .row .text {
     width: 40vw;
-    font-size: 2vh;
+    font-size: 2.2vh;
   }
 
   .marquee {
@@ -449,6 +451,7 @@ button:hover-out {
     padding-top: 3vh;
     margin-bottom: -10vw;
   }
+
   nav ul li {
     margin: -0.8vw 5px;
   }
@@ -467,18 +470,20 @@ button:hover-out {
   }
 
   .row .text {
+    align-items: center;
     text-align: center;
     margin-bottom: 5vh;
-    padding-right: 5vh;
+    padding-right: 3vh;
     width: 75vw;
     font-size: clamp(1.5vh, 2.5vh, 3vh);
   }
 
   .row .image {
-    padding-right: 10vw;
+    padding-right: 7vw;
     width: 30vw; /* Ajuste la taille de l’image */
     max-width: 300px; /* Empêche que l’image soit trop grande */
-    margin-top: -25vw; 
+    margin-top: -30vw; 
+    margin-bottom: -10vh;
   }
 
   /* Ajustement de l’image de la rangée inverse */
