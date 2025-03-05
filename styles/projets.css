@@ -31,6 +31,12 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 2vw 4vh;
+position: relative;
+  z-index: 999;
+}
+
+.pixelBackground {
+  z-index: 9999;
 }
 
 nav ul {
@@ -142,9 +148,6 @@ text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   margin: 10px 0;
 }
 
-.img:hover .project-info {
-  transform: translate(-50%, -45%);
-}
 
 .section-titleF {
 z-index: 9999;
@@ -324,17 +327,14 @@ section {
 }
 
 @media (max-width: 912px)  and (orientation: landscape) {
-nav {
-  margin-bottom: 100vh;
-}
+
 
 section {
   margin-top: 5vh;
   cursor: grab;
   position: relative;
   width: 520vh;
-  height: 100vh;
-  padding: 3vw 50vw 0 5vw;
+  height: 75vh;
   display: flex;
   gap: 1.5vh;
   overflow: hidden;
@@ -343,7 +343,7 @@ section {
 .project-info {
   width: 20vw;
   font-size: 5vh;
-  top: 33vh;
+  top: 35vh;
   left: 33vh;
 }
 
@@ -386,7 +386,7 @@ section {
 }
 
 .project-info {
-  top: 40vh;
+  top: 37vh;
   left: 38vw;
 }
 .section-titleF h1 {

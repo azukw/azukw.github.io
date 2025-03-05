@@ -59,7 +59,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2% 4%;
+    padding: 2% 4%; 
+    z-index: 999;
+}
+    
+.pixelBackground {
+  z-index: 9999;
 }
 
 

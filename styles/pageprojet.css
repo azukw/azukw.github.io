@@ -48,9 +48,15 @@ header {
 header {
   padding-top: 5.5vh;
   margin-bottom: -2vh;
+  z-index: 999;
 }
 nav {
   margin-left: -0.5vh;
+  z-index: 999;
+}
+
+.pixelBackground {
+  z-index: 9999;
 }
 
 .button-style.active {
@@ -566,16 +572,20 @@ section {
   }
 }
 
-@media (max-width: 1000px) and (max-height: 600px ) and (orientation: landscape) {
+@media (max-width: 1000px) and (max-height: 600px) and (orientation: landscape) {
   header {
-    margin-bottom: -5vh;
-    padding-top: 2.5vh;
+    margin-bottom: -6vh;
+    padding-top: 5.5vh;
+    position: relative;
+    z-index: 1000;
   }
 
   nav {
-    margin-top: -0.5vw;
+    margin-top: 0;
     padding-top: 2vh;
-    margin-left: -15vh;
+    margin-left: -55vh;
+    position: relative; /* Ajout */
+    z-index: 10000; /* Assure que nav est devant */
   }
 
   .button-style {
@@ -585,7 +595,7 @@ section {
 
   .project-title {
     line-height: 9vh;
-    font-size: 13vw;
+    font-size: 10vw;
     margin-right: 2vw;
     padding-top: 1vh;
   }
@@ -597,21 +607,14 @@ section {
   }
 
   section {
-    margin-top: -4vw;
     cursor: grab;
     position: relative;
     width: 1000vh;
-    height: 95vh;
     gap: 1.5vh;
     overflow: hidden;
-  }
-
-  .scroll-line {
-    display: flex;
-  }
-
-  .scroll-text {
-    display: flex;
+    z-index: 1; 
+    margin-top: -20vh;
+    height: 95vh;
   }
 
   .project-info {
@@ -619,13 +622,32 @@ section {
     font-size: 10vh;
     width: 40vh;
     right: -5vh;
-    top: clamp(20vh, 41vh, 45vh);
+    top: clamp(20vh, 36vh, 45vh);
   }
 
   .project-number {
     font-size: 6vw;
   }
+
+  .footer {
+    padding-bottom: 10vh;
+    height: 10vh;
+  }
+
+  .text-top {
+    font-size: 2.5vh;
+  }
+  
+  .text-bottom {
+    font-size: 2.5vh;
+  }
+
+  .container {
+    margin-top: 10vh;
+    height: 80vh;
+  }
 }
+
 
 @media (max-width: 600px) and (orientation: portrait) {
   nav {

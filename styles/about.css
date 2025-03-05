@@ -58,9 +58,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2% 4%;
-  margin-bottom: -4%;
-}
+  padding: 2vw 4vh;
+  position: relative;
+    z-index: 999;
+  }
+  
+  .pixelBackground {
+    z-index: 9999;
+  }
 
 nav ul {
   list-style: none;
@@ -377,13 +382,8 @@ button:hover-out {
 
 @media (max-width: 912px) and (orientation: landscape) {
   nav {
-    margin-bottom: -5vh;
+    margin-bottom: -6vh;
     font-size: 0.8vw;
-  }
-
-  nav ul li {
-    margin: -0.5vw 3vw;
-    font-size: 1vw;
   }
 
   .row .text {
