@@ -313,7 +313,7 @@ button:hover-out {
   }
 }
 
-@media (max-width: 1000px) and (orientation: portrait) {
+@media (max-width: 1100px) and (orientation: portrait) {
   nav {
     padding-top: 1vh;
     padding-bottom: 5vh;
@@ -367,7 +367,7 @@ button:hover-out {
     padding-right: 2vw;
     padding-top: 1.5vh; 
     padding-bottom: 1.5vh; 
-    font-size: 1.5vw;
+    font-size: 2vw;
   }
 
   .section-titleF h1 {
@@ -407,7 +407,7 @@ button:hover-out {
   }
 
   .contactez {
-    margin-top: -8vh;
+    margin-top: -4vh;
     font-size: 0.7vw;
   }
 
@@ -470,7 +470,7 @@ button:hover-out {
     width: 30vw;
     max-width: 300px;
     margin-top: -20vw; 
-    margin-bottom: 0vh;
+    margin-bottom: -5vh;
   }
 
  

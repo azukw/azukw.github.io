@@ -11,7 +11,17 @@ window.onload = function () {
     let scrollLeft;
     let isDragging = false;
     let maxDragX;
+    let isMouseOverImage = false;
 
+
+    container.addEventListener("mouseenter", () => {
+        isMouseOverImage = true;
+    });
+    
+    container.addEventListener("mouseleave", () => {
+        isMouseOverImage = false;
+    });
+    
     // Fonction pour recalculer les valeurs nécessaires
     function recalculateValues() {
         const imageWidth = images[0].offsetWidth + gap + 20; // Largeur d'une image + marge
@@ -39,17 +49,19 @@ window.onload = function () {
 
     // Scroll avec la molette
     window.addEventListener("wheel", function (event) {
+        if (!isMouseOverImage) return; // Ne pas autoriser le défilement si la souris n'est pas sur l'image
         event.preventDefault();
         let delta = event.deltaY;
         let newX = gsap.getProperty(scroller, "x") + delta;
         newX = Math.max(0, Math.min(newX, maxDragX));
-
+    
         gsap.to(scroller, { x: newX, duration: 0.01, ease: "power3.out" });
         updateContainerPosition(newX);
     }, { passive: false });
 
     // Drag avec la souris
     container.addEventListener("mousedown", (e) => {
+        if (!isMouseOverImage) return; // Si la souris n'est pas sur l'image, ne commence pas le drag
         e.preventDefault();
         isDown = true;
         isDragging = false;
@@ -89,10 +101,15 @@ window.onload = function () {
 
     // Drag avec le tactile
     container.addEventListener("touchstart", (e) => {
+        if (!isMouseOverImage) {
+            isTouchOnImage = false;
+            return; // Si la touche n'est pas sur une image, on ne permet pas le drag
+        }
+        isTouchOnImage = true; // Si l'on touche une image, on autorise l'interaction
         e.preventDefault();
         isDown = true;
         isDragging = false;
-        startX = e.touches[0].pageX;
+        startX = e.touches[0].pageX; // Utilise le premier touché (index 0)
         scrollLeft = gsap.getProperty(scroller, "x");
     });
 
@@ -102,13 +119,13 @@ window.onload = function () {
     });
 
     container.addEventListener("touchmove", (e) => {
-        if (!isDown) return;
+        if (!isDown || !isTouchOnImage) return; // Empêche le mouvement si la souris n'est pas sur l'image ou si on n'a pas démarré le drag
         e.preventDefault();
         isDragging = true;
-
+    
         const moveX = e.touches[0].pageX - startX;
         let newX = Math.max(0, Math.min(scrollLeft - moveX, maxDragX));
-
+    
         gsap.to(scroller, { x: newX, duration: 0.5, ease: "power3.out" });
         updateContainerPosition(newX);
     });

@@ -117,7 +117,7 @@ main {
 .text-block {
     padding-top: 3vh;
     width: 22vw;
-    font-size: 0.8vw;
+    font-size: 0.9vw;
     line-height: 1.5;
 }
 
@@ -160,10 +160,10 @@ main {
 
 .title {
     font-family: "PPNeueBit", sans-serif;
-    font-size: 16vw;
+    font-size: 18vw;
     font-weight: bold;
     letter-spacing: 2px;
-    margin-top: -2%;
+    margin-top: 10vh;
     transition: letter-spacing 1s;
     text-align: center;
 }
@@ -375,7 +375,8 @@ main {
     .title {
         line-height: 15vh;
         width: 100vw;
-        font-size: clamp(12vh, 25vh, 30vh);
+        margin-top: 0vh;
+        font-size: clamp(12vh, 23vh, 30vh);
         white-space: nowrap;
     }
 
@@ -389,7 +390,7 @@ main {
     }
 }
 
-@media (max-width: 1000px)  and (orientation: portrait) {
+@media (max-width: 1100px)  and (orientation: portrait) {
 
     nav {
         padding-top: 1vh;

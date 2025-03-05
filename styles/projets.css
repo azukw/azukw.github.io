@@ -393,3 +393,9 @@ section {
   display: none ;
 }
 }
+
+@media (max-width: 480px) and (max-height: 580px) and (orientation: portrait) {
+  nav ul li {
+    font-size: 3vw;
+  }
+}

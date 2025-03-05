@@ -207,14 +207,17 @@ section {
 
 .label {
   padding-top: 45px;
-  font-size: 20px;
+  font-size: 22px;
   text-transform: uppercase;
+  font-weight: bolder;
 }
 
 .label2 {
   padding-top: 45px;
-  font-size: 20px;
+  font-size: 22px;
   text-transform: uppercase;
+  font-weight: bolder;
+
 }
 
 .value {
@@ -295,12 +298,12 @@ section {
 }
 
 .footer-title {
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: bolder;
 }
 
 .footer-text {
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 1px;
 }
 
@@ -335,6 +338,12 @@ section {
     top: 45vh;
   }
 
+  .project-title {
+    font-size: 10vw;
+    margin-right: 2vw;
+    margin-top: 3vh;
+  }
+
   nav {
     margin-left: 5vh;
   }
@@ -343,6 +352,18 @@ section {
     margin-top: 0vh;
   }
 }
+
+@media (max-width: 1400px) and (orientation: landscape) {
+  .project-title {
+    font-size: 8vw;
+    margin-right: 2vw;
+    margin-top: 5.5vh;
+  }
+  .text-bottom {
+    font-size: 2.1vh;
+  }
+}
+
 
 @media (max-width: 1100px) and (orientation: landscape) {
   .project-info {
@@ -354,16 +375,16 @@ section {
   }
 
   .project-title {
-    font-size: 10vw;
+    font-size: 9vw;
     margin-right: 2vw;
     margin-top: 5.5vh;
   }
   .text-bottom {
-    font-size: 2.3vh;
+    font-size: 2vh;
   }
 }
 
-@media (max-width: 1000px) and (orientation: portrait) {
+@media (max-width: 1100px) and (orientation: portrait) {
   header {
     padding-top: 2.5vh;
   }
@@ -380,7 +401,7 @@ section {
   }
 
   .project-title {
-    line-height: 6vh;
+    line-height: 8vh;
     font-size: 14vw;
     margin-right: 2vw;
     margin-top: 2.5vh;
@@ -398,11 +419,11 @@ section {
   }
 
   section {
-    margin-top: 10vw;
+    margin-top: 15vw;
     cursor: grab;
     position: relative;
     width: 1000vh;
-    height: 125vw;
+    height: 95vw;
     gap: 1.5vh;
     overflow: hidden;
   }
@@ -418,104 +439,12 @@ section {
   .project-info {
     top: 58vh;
   }
+  .text-bottom {
+    font-size: 2vh;
+  }
 }
 
 @media (max-width: 912px) and (orientation: landscape) {
-  header {
-    padding-top: 5.5vh;
-  }
-
-  nav {
-    padding-top: 2vh;
-    margin-left: -60vh;
-  }
-
-  .button-style {
-    margin-right: 0.01vh;
-    margin-bottom: -1.5vh;
-  }
-
-  .project-title {
-    font-size: 8vw;
-    margin-right: 2vw;
-    margin-top: 10.5vh;
-  }
-
-  .project-number {
-    font-size: 5vw;
-    margin-top: 5.5vh;
-  }
-
-  .project-header {
-    margin-top: -8vh;
-    position: relative;
-    top: 3vh;
-  }
-
-  section {
-    margin-top: 0vw;
-    cursor: grab;
-    padding-top: 50vh;
-    position: relative;
-    width: 300vw;
-    height: 42vw;
-    gap: 1.5vh;
-    overflow: hidden;
-  }
-
-  .text-top {
-    font-size: 3vh;
-    margin-top: vh;
-    margin-bottom: 2vh;
-  }
-
-  .text-bottom {
-    font-size: 2.3vh;
-  }
-
-  .scroll-line {
-    display: none;
-  }
-
-  .scroll-text {
-    display: none;
-  }
-
-  .footer {
-    display: none;
-  }
-
-  .project-info {
-    line-height: 7vh;
-    font-size: clamp(
-      2rem,
-      3.5vw,
-      5rem
-    );
-    width: 20vw;
-    right: -5.5vw;
-    top: 35vh;
-    position: absolute;
-    text-align: center;
-    transform: translateX(-50%);
-  }
-}
-
-@media (max-width: 912px) and (max-height: 320px ) and (orientation: landscape) {
-  section {
-    margin-top: -5vw;
-    cursor: grab;
-    position: relative;
-    width: 300vw;
-    height: 48vw;
-    gap: 1.5vh;
-    overflow: hidden;
-  }
-
-  
-}
-
-@media (max-width: 768px) and (orientation: portrait) {
   header {
     margin-bottom: -5vh;
     padding-top: 2.5vh;
@@ -533,8 +462,8 @@ section {
   }
 
   .project-title {
-    line-height: 8vh;
-    font-size: 14vw;
+    line-height: 9vh;
+    font-size: 13vw;
     margin-right: 2vw;
     padding-top: 1vh;
   }
@@ -576,45 +505,129 @@ section {
   }
 }
 
-@media (max-width: 600px) and (orientation: portrait) {
-  .project-header-bottom {
-    width: 100%;
-    display: flex;
+@media (max-width: 912px) and (orientation: portrait) {
+  header {
+    margin-bottom: -5vh;
+    padding-top: 2.5vh;
+  }
+
+  nav {
+    margin-top: -0.5vw;
+    padding-top: 2vh;
+    margin-left: -15vh;
+  }
+
+  .button-style {
+    margin-right: 0.01vh;
+    margin-bottom: -1.5vh;
   }
 
   .project-title {
-    font-size: 29vw;
-    margin-right: -1vh;
+    line-height: 8vh;
+    font-size: 14vw;
+    margin-right: 2vw;
+    padding-top: 1vh;
+  }
+
+  .project-header {
+    margin-bottom: 150vh;
+    position: relative;
+    top: 3vh;
+  }
+
+  section {
+    margin-top: 11vw;
+    cursor: grab;
+    position: relative;
+    width: 1000vh;
+    height: 80vh;
+    gap: 1.5vh;
+    overflow: hidden;
+  }
+
+  .scroll-line {
+    display: flex;
+  }
+
+  .scroll-text {
+    display: flex;
+  }
+
+  .project-info {
+    line-height: 6vh;
+    font-size: 10vh;
+    width: 40vh;
+    right: -5vh;
+    top: clamp(20vh, 41vh, 45vh);
   }
 
   .project-number {
-    margin-top: -5vh;
-  }
-
-  .footer-content {
-    display: none;
-  }
-
-  .topdet {
-    display: none;
-  }
-
-  .label2 {
-    padding-left: 10vw;
-    font-size: 3vh;
-  }
-
-  .text-top {
-    font-size: 2vh;
-    margin-bottom: 2vh;
-  }
-
-  .text-bottom {
-    font-size: 1.3vh;
+    font-size: 6vw;
   }
 }
 
-@media (max-width: 480px) and (orientation: portrait) {
+@media (max-width: 1000px) and (max-height: 600px ) and (orientation: landscape) {
+  header {
+    margin-bottom: -5vh;
+    padding-top: 2.5vh;
+  }
+
+  nav {
+    margin-top: -0.5vw;
+    padding-top: 2vh;
+    margin-left: -15vh;
+  }
+
+  .button-style {
+    margin-right: 0.01vh;
+    margin-bottom: -1.5vh;
+  }
+
+  .project-title {
+    line-height: 9vh;
+    font-size: 13vw;
+    margin-right: 2vw;
+    padding-top: 1vh;
+  }
+
+  .project-header {
+    margin-bottom: 150vh;
+    position: relative;
+    top: 3vh;
+  }
+
+  section {
+    margin-top: -4vw;
+    cursor: grab;
+    position: relative;
+    width: 1000vh;
+    height: 95vh;
+    gap: 1.5vh;
+    overflow: hidden;
+  }
+
+  .scroll-line {
+    display: flex;
+  }
+
+  .scroll-text {
+    display: flex;
+  }
+
+  .project-info {
+    line-height: 6vh;
+    font-size: 10vh;
+    width: 40vh;
+    right: -5vh;
+    top: clamp(20vh, 41vh, 45vh);
+  }
+
+  .project-number {
+    font-size: 6vw;
+  }
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
   nav {
     margin-left: 0vh;
   }
@@ -632,7 +645,7 @@ section {
     display: block;
     font-size: 15vh;
     line-height: 9vh;
-    margin-top: 1vh;
+    margin-top: 5vh;
     padding-left: 10vw;
   }
 
@@ -672,33 +685,113 @@ section {
 
   .text-bottom {
     padding-bottom: 7vw;
-    font-size: 1.3vh;
+    font-size: 1.8vh;
+  }
+}
+
+@media (max-width: 480px) and (orientation: portrait) {
+  nav {
+    margin-left: 0vh;
+  }
+
+  .project-header-bottom {
+    width: 100%;
+    display: flex;
+  }
+
+  .project-title {
+    display: none;
+  }
+
+  .altitle {
+    display: block;
+    font-size: 15vh;
+    line-height: 9vh;
+    margin-top: 5vh;
+    padding-left: 10vw;
+  }
+
+  .project-number {
+    margin-top: -15vh;
+  }
+
+  .project-info {
+    top: 38vh;
+  }
+
+  section {
+    padding-top: 30vh;
+    cursor: grab;
+    position: relative;
+    width: 1000vh;
+    gap: 1.5vh;
+    overflow: hidden;
+  }
+
+  .footer-content {
+    display: none;
+  }
+
+  .topdet {
+    display: none;
+  }
+
+  .label2 {
+    padding-left: 0;
+    font-size: 3vh;
+  }
+
+  .text-top {
+    font-size: 2vh;
+  }
+
+  .text-bottom {
+    padding-bottom: 0vw;
+    font-size: 2.7vw;
   }
 }
 
 @media (max-width: 480px) and (max-height: 580px) and (orientation: portrait) {
   .button-style {
-    padding: 1.2vh 2.5vh;
+    padding: 1vh 2.5vh;
+  }
+
+  nav ul  {
+    padding: 1.5vh 3vh;
+
   }
 
   nav ul li {
     font-size: 1.8vh;
   }
-  .project-title {
-    margin-top: -1vh;
-    font-size: 25vw;
+
+  .altitle {
+    line-height: 7vh;
+    margin-top: 2vh;
+    font-size: 20vw;
   }
+
+  .project-number {
+    margin-top: -10vh;
+    font-size: 10vw;
+  }
+
+  
   .text-bottom {
-    padding-bottom: 15vw;
-    font-size: 1.3vh;
+    font-size: 1.5vh;
   }
 
   section {
-    
-   padding-top: 25vh;
+    height: 75vh;
+    padding-top: 25vh;
   }
 
   .project-info {
     top: 34vh;
+  }
+
+  .footer {
+    padding-bottom: 12vh;
+    height: 10vh;
   }
 }
