@@ -21,7 +21,7 @@ window.onload = function () {
     container.addEventListener("mouseleave", () => {
         isMouseOverImage = false;
     });
-    
+
     // Fonction pour recalculer les valeurs nécessaires
     function recalculateValues() {
         const imageWidth = images[0].offsetWidth + gap + 20; // Largeur d'une image + marge
@@ -101,17 +101,13 @@ window.onload = function () {
 
     // Drag avec le tactile
     container.addEventListener("touchstart", (e) => {
-        if (!isMouseOverImage) {
-            isTouchOnImage = false;
-            return; // Si la touche n'est pas sur une image, on ne permet pas le drag
-        }
-        isTouchOnImage = true; // Si l'on touche une image, on autorise l'interaction
-        e.preventDefault();
-        isDown = true;
-        isDragging = false;
-        startX = e.touches[0].pageX; // Utilise le premier touché (index 0)
-        scrollLeft = gsap.getProperty(scroller, "x");
-    });
+    e.preventDefault(); // Empêche le scroll par défaut de la page
+    isDown = true;
+    isDragging = false;
+    startX = e.touches[0].pageX;
+    scrollLeft = gsap.getProperty(scroller, "x");
+});
+
 
     container.addEventListener("touchend", () => {
         isDown = false;
