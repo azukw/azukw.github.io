@@ -467,8 +467,8 @@ button:hover-out {
 
   .row .image {
     padding-right: 7vw;
-    width: 30vw;
-    max-width: 300px;
+    width: 25vw;
+    max-width: 30vw;
     margin-top: -25vw; 
     margin-bottom: -7vh;
   }
