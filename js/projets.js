@@ -101,12 +101,12 @@ window.onload = function () {
 
     // Drag avec le tactile
     container.addEventListener("touchstart", (e) => {
-        e.preventDefault(); // Empêche le scroll par défaut de la page
+        e.preventDefault(); // Bloque le scroll de la page
         isDown = true;
         isDragging = false;
         startX = e.touches[0].pageX;
         scrollLeft = gsap.getProperty(scroller, "x");
-    });
+    }, { passive: false });
     
     
     container.addEventListener("touchend", () => {
@@ -115,8 +115,8 @@ window.onload = function () {
     });
 
     container.addEventListener("touchmove", (e) => {
-        if (!isDown || !isTouchOnImage) return; // Empêche le mouvement si la souris n'est pas sur l'image ou si on n'a pas démarré le drag
-        e.preventDefault();
+        if (!isDown) return;
+        e.preventDefault(); // Empêche le scroll vertical de la page
         isDragging = true;
     
         const moveX = e.touches[0].pageX - startX;
@@ -124,7 +124,7 @@ window.onload = function () {
     
         gsap.to(scroller, { x: newX, duration: 0.5, ease: "power3.out" });
         updateContainerPosition(newX);
-    });
+    }, { passive: false });
 };
 
 document.addEventListener("DOMContentLoaded", function () {
