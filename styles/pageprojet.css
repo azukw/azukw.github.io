@@ -259,13 +259,13 @@ section {
 
 .project-info {
   text-decoration: none;
-  rotate: 90deg;
+  rotate: -90deg;
   position: absolute;
   top: 30vw;
   line-height: 8vh;
   right: -18vh;
   width: 70vh;
-  transform: translate(-50%, -50%);
+  transform: translate(50%, 40%);
   font-size: 14vh;
   text-align: center;
   opacity: 1;
@@ -363,7 +363,7 @@ section {
   .project-title {
     font-size: 8vw;
     margin-right: 2vw;
-    margin-top: 5.5vh;
+    margin-top: 1.5vh;
   }
   .text-bottom {
     font-size: 2.1vh;
@@ -443,10 +443,14 @@ section {
   }
 
   .project-info {
-    top: 58vh;
+    top: 53vh;
   }
   .text-bottom {
     font-size: 2vh;
+  }
+
+  .text-bottom {
+    font-size: 1.5vh;
   }
 }
 
@@ -582,7 +586,7 @@ section {
 
   nav {
     margin-top: 0;
-    padding-top: 2vh;
+    padding-top: 1.7vh;
     margin-left: -55vh;
     position: relative; /* Ajout */
     z-index: 10000; /* Assure que nav est devant */
@@ -613,7 +617,7 @@ section {
     gap: 1.5vh;
     overflow: hidden;
     z-index: 1; 
-    margin-top: -20vh;
+    margin-top: -18vh;
     height: 95vh;
   }
 
@@ -622,7 +626,7 @@ section {
     font-size: 10vh;
     width: 40vh;
     right: -5vh;
-    top: clamp(20vh, 36vh, 45vh);
+    top: clamp(20vh, 35vh, 45vh);
   }
 
   .project-number {
@@ -630,7 +634,7 @@ section {
   }
 
   .footer {
-    padding-bottom: 10vh;
+    padding-bottom: 8vh;
     height: 10vh;
   }
 
@@ -640,6 +644,90 @@ section {
   
   .text-bottom {
     font-size: 2.5vh;
+  }
+
+  .container {
+    margin-top: 10vh;
+    height: 80vh;
+  }
+}
+
+@media (max-width: 1000px) and (max-height: 400px) and (orientation: landscape) {
+  header {
+    margin-bottom: -6vh;
+    padding-top: 5.5vh;
+    position: relative;
+    z-index: 1000;
+  }
+
+  nav {
+    margin-top: 0;
+    padding-top: 1.7vh;
+    margin-left: -55vh;
+    position: relative; /* Ajout */
+    z-index: 10000; /* Assure que nav est devant */
+  }
+
+  .button-style {
+    margin-right: 0.01vh;
+    margin-bottom: -1.5vh;
+  }
+
+  .project-title {
+    line-height: 9vh;
+    font-size: 9vw;
+    margin-right: 2vw;
+    padding-top: 1vh;
+  }
+
+  .project-header {
+    margin-bottom: 150vh;
+    position: relative;
+    top: 3vh;
+  }
+
+  section {
+    cursor: grab;
+    position: relative;
+    width: 1000vh;
+    gap: 1.5vh;
+    overflow: hidden;
+    z-index: 1; 
+    margin-top: -30vh;
+    height: 110vh;
+  }
+
+  .project-info {
+    line-height: 6vh;
+    font-size: 9vh;
+    width: 40vh;
+    right: -5vh;
+    top: clamp(20vh, 33vh, 45vh);
+  }
+
+  .project-number {
+    font-size: 6vw;
+  }
+
+  .footer {
+    padding-bottom: 6vh;
+    height: 10vh;
+  }
+  
+  .footer-title {
+    font-size: 2.5vh;
+  }
+
+  .footer-text {
+    font-size: 2vh;
+  }
+
+  .text-top {
+    font-size: 2.5vh;
+  }
+  
+  .text-bottom {
+    font-size: 2vh;
   }
 
   .container {
@@ -777,6 +865,7 @@ section {
     padding-bottom: 10vh;
     height: 10vh;
   }
+
 }
 
 @media (max-width: 480px) and (max-height: 580px) and (orientation: portrait) {

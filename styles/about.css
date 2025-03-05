@@ -241,7 +241,7 @@ button:hover-out {
 
 @media (max-width: 1800px) and (orientation: landscape) {
   nav {
-    margin-bottom: 10vh;
+    margin-bottom: 0vh;
   }
 
   .container {
@@ -269,9 +269,8 @@ button:hover-out {
 
 @media (max-width: 1450px) and (orientation: landscape) {
   nav {
-    margin-bottom: 12vh;
+    margin-bottom: 0vh;
   }
-
   .container {
     margin-bottom: 4vw;
     margin-top: -5vh;
@@ -289,7 +288,7 @@ button:hover-out {
 
 @media (max-width: 1100px) and (orientation: landscape) {
   nav {
-    margin-bottom: 10vh;
+    margin-bottom: 0vh;
   }
 
   .container {
@@ -321,7 +320,7 @@ button:hover-out {
 @media (max-width: 1100px) and (orientation: portrait) {
   nav {
     padding-top: 1vh;
-    padding-bottom: 5vh;
+    padding-bottom: 50h;
   }
 
   .container {
@@ -382,12 +381,13 @@ button:hover-out {
 
 @media (max-width: 912px) and (orientation: landscape) {
   nav {
-    margin-bottom: -6vh;
+    margin-bottom: -20vh;
     font-size: 0.8vw;
+    margin-top: -10vh;
   }
 
   .row .text {
-    margin-top: 4vh;
+    margin-top: 0vh;
     width: 40vw;
     font-size: clamp(1.3vw, 2.2vh, 3vw);
   }
@@ -407,7 +407,7 @@ button:hover-out {
   }
 
   .contactez {
-    margin-top: -4vh;
+    margin-top: -7vh;
     font-size: 0.7vw;
   }
 

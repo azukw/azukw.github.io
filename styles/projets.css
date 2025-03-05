@@ -304,7 +304,7 @@ section {
 }
 }
 
-@media (max-width: 1000px)  and (orientation: portrait) {
+@media (max-width: 1100px)  and (orientation: portrait) {
 section {
   cursor: grab;
   position: relative;
@@ -326,7 +326,7 @@ section {
 }
 }
 
-@media (max-width: 912px)  and (orientation: landscape) {
+@media (max-width: 1002px)  and (orientation: landscape) {
 
 
 section {
@@ -344,7 +344,7 @@ section {
   width: 20vw;
   font-size: 5vh;
   top: 35vh;
-  left: 33vh;
+  left: 35vh;
 }
 
 .project-title {
@@ -354,6 +354,13 @@ section {
 .section-titleF h1 {
   display: none ;
 }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .project-info {
+    top: 35vh;
+    left: 16vw;
+  }
 }
 
 @media (max-width: 768px) and (orientation: portrait) {
