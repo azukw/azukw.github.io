@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         pixelBackground.innerHTML = ""; // Vide les anciens blocs pour éviter les doublons
 
         const { innerWidth, innerHeight } = window;
-        const blockSize = Math.max(innerWidth * 0.05, 20); // Taille des blocs ajustée
+        const blockSize = Math.max(innerWidth * 0.08, 20); // Taille des blocs ajustée
         const columns = Math.ceil(innerWidth / blockSize); 
         const rows = Math.ceil(innerHeight / blockSize); 
 
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         gsap.to(".block", {
             opacity: 0,
             duration: 0.1,
-            stagger: { amount: 0.5, from: "random" },
+            stagger: { amount: 0.3, from: "random" },
             onComplete: () => {
                 pixelBackground.style.display = "none";
             }
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
             { 
                 opacity: 1,
                 duration: 0.3,
-                stagger: { amount: 0.5, from: "random" },
+                stagger: { amount: 0.3, from: "random" },
                 onComplete: () => {
                     window.location.href = destination;
                 }

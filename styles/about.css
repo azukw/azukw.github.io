@@ -112,6 +112,7 @@ main {
   align-items: center;
   margin-bottom: 4vh;
   gap: 20vw;
+  margin-top: -5vh;
 }
 
 .row .text {
@@ -147,7 +148,7 @@ main {
 }
 
 .contactez {
-  margin-top: -4vh;
+  margin-top: 0vh;
   overflow: visible;
   display: flex;
   align-items: center;

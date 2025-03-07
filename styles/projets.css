@@ -131,8 +131,8 @@ filter: blur(5px) brightness(0.7);
 .project-info {
 pointer-events: none;
 position: absolute;
-top: 40vh;
-left: 33vh;
+top: 40%;         /* Centré verticalement */
+left: 53%;        /* Centré horizontalement */
 transform: translate(-50%, -50%);
 color: white;
 text-align: center;
@@ -237,11 +237,7 @@ color: #777;
 
 
 @media (max-width: 1800px) and (orientation: landscape) {
-.project-info {
-  position: absolute;
-  top: 40vh;
-  left: 34vh;
-}
+
 
 section {
   cursor: grab;
@@ -274,10 +270,6 @@ section {
   overflow: hidden;
 }
 
-.project-info {
-  top: 40vh;
-  left: 24vw;
-}
 
 }
 
@@ -293,10 +285,6 @@ section {
   overflow: hidden;
 }
 
-.project-info {
-  top: 38vh;
-  left: 28vw;
-}
 
 .section-titleF h1 {
   padding-right: 5vw;
@@ -317,10 +305,6 @@ section {
 }
 
 
-.project-info {
-  top: 40vh;
-  left: 38vw;
-}
 .section-titleF h1 {
   display: none ;
 }
@@ -343,8 +327,6 @@ section {
 .project-info {
   width: 20vw;
   font-size: 5vh;
-  top: 35vh;
-  left: 35vh;
 }
 
 .project-title {
@@ -356,21 +338,10 @@ section {
 }
 }
 
-@media (max-width: 768px) and (orientation: landscape) {
-  .project-info {
-    top: 35vh;
-    left: 16vw;
-  }
-}
 
 @media (max-width: 768px) and (orientation: portrait) {
 nav {
   padding-top: 1.5vh
-}
-
-.project-info {
-  top: 40vh;
-  left: 36vw;
 }
 }
 
@@ -392,10 +363,6 @@ section {
   overflow: hidden;
 }
 
-.project-info {
-  top: 37vh;
-  left: 38vw;
-}
 .section-titleF h1 {
   display: none ;
 }
