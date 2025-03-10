@@ -261,12 +261,12 @@ section {
   text-decoration: none;
   rotate: -90deg;
   position: absolute;
-  top: 30vw;
-  line-height: 8vh;
-  right: -19vh;
+  top: 54vh;
+  line-height: 7vh;
+  right: -20vh;
   width: 70vh;
   transform: translate(50%, 40%);
-  font-size: 14vh;
+  font-size: 12vh;
   text-align: center;
   opacity: 1;
   font-family: "PPNeueBit", sans-serif;
@@ -333,15 +333,13 @@ section {
   display: none;
 }
 
-
-
 @media (max-width: 1800px) and (orientation: landscape) {
   .project-info {
     line-height: 6vh;
-    font-size: 10vh;
+    font-size: 11vh;
     width: 40vh;
-    right: -5vh;
-    top: 45vh;
+    right: -6vh;
+    top: 42vh;
   }
 
   .project-title {
@@ -567,8 +565,8 @@ section {
     line-height: 6vh;
     font-size: 10vh;
     width: 40vh;
-    right: -5vh;
-    top: clamp(20vh, 41vh, 45vh);
+    right: -6vh;
+    top: clamp(20vh, 36vh, 45vh);
   }
 
   .project-number {

@@ -351,6 +351,11 @@ nav {
 nav {
   padding-top: 1.5vh;
 }
+
+.project-info {
+  padding-bottom: 5vh;
+}
+
 section {
   margin-top: 5vh;
   cursor: grab;

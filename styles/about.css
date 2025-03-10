@@ -110,9 +110,9 @@ main {
 .row {
   display: flex;
   align-items: center;
-  margin-bottom: 4vh;
+  margin-bottom: 9vh;
   gap: 20vw;
-  margin-top: -5vh;
+  margin-top: -8vh;
 }
 
 .row .text {
@@ -289,7 +289,7 @@ button:hover-out {
 
 @media (max-width: 1100px) and (orientation: landscape) {
   nav {
-    margin-bottom: 0vh;
+    margin-bottom: 8vh;
   }
 
   .container {
@@ -321,7 +321,7 @@ button:hover-out {
 @media (max-width: 1100px) and (orientation: portrait) {
   nav {
     padding-top: 1vh;
-    padding-bottom: 50h;
+    margin-bottom: 5vh;
   }
 
   .container {
@@ -382,15 +382,15 @@ button:hover-out {
 
 @media (max-width: 912px) and (orientation: landscape) {
   nav {
-    margin-bottom: -20vh;
+    margin-bottom: -10vh;
     font-size: 0.8vw;
-    margin-top: -10vh;
+    margin-top: 0vh;
   }
 
   .row .text {
     margin-top: 0vh;
     width: 40vw;
-    font-size: clamp(1.3vw, 2.2vh, 3vw);
+    font-size: clamp(1.1vw, 1.1vh, 2vw);
   }
 
   .row .image {
@@ -399,7 +399,8 @@ button:hover-out {
 
   .inverse .text {
     margin-top: 0vh;
-    font-size: clamp(1.2vw, 2.2vh, 3vw);
+    margin-bottom: 5vh;
+    font-size: clamp(1vw, 1.1vh, 2vw);
     width: 40vw;
   }
 
@@ -409,7 +410,7 @@ button:hover-out {
 
   .contactez {
     margin-top: -7vh;
-    font-size: 0.7vw;
+    font-size: 0.5vw;
   }
 
   .buttons {
@@ -437,7 +438,7 @@ button:hover-out {
 
   nav {
     padding-top: 3vh;
-    margin-bottom: -5vw;
+    margin-bottom: 10vw;
   }
 
   nav ul li {
