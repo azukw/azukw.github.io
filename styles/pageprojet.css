@@ -795,6 +795,14 @@ section {
     padding-bottom: 7vw;
     font-size: 1.8vh;
   }
+
+  .footer {
+    padding: 1vw 16vw;
+    padding-bottom: 3vh;
+    margin-left: 5vw;
+    
+}
+
 }
 
 @media (max-width: 480px) and (orientation: portrait) {
@@ -917,7 +925,10 @@ section {
   }
 
   .footer {
-    padding-bottom: 12vh;
-    height: 10vh;
-  }
+    padding: 1vw 16vw;
+    padding-bottom: 3vh;
+    margin-left: 5vw;
+    
+}
+
 }
