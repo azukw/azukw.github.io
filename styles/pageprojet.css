@@ -813,14 +813,15 @@ section {
 
   .altitle {
     display: block;
-    font-size: 15vh;
-    line-height: 9vh;
-    margin-top: 5vh;
-    padding-left: 10vw;
+    font-size: 11vh;
+    line-height: 7vh;
+    margin-top: 2vh;
+    padding-left: 20vw;
   }
 
   .project-number {
-    margin-top: -15vh;
+    margin-top: -12vh;
+    padding-right: 10vw;
   }
 
   .project-info {
@@ -828,12 +829,12 @@ section {
   }
 
   section {
-    padding-top: 30vh;
+    padding-top: 22vh;
     cursor: grab;
     position: relative;
     width: 1000vh;
     gap: 1.5vh;
-    height: 80vh;
+    height: 70vh;
     overflow: hidden;
   }
 
