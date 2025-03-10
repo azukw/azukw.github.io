@@ -865,10 +865,15 @@ section {
   }
 
   .footer {
-    padding-left: 15vw;
-    padding-bottom: 5vh;
-    height: 1vh;
-  }
+    padding: 1vw 16vw;
+    padding-bottom: 3vh;
+    margin-left: 5vw;
+    
+}
+
+
+
+
 
 }
 
